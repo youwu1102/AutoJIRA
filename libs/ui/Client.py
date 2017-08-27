@@ -11,7 +11,7 @@ Author：You Wu
 
 class Client(wx.Frame):
     def __init__(self):
-        wx.Frame.__init__(self, None, -1, title="JIRA Tool", size=(1000, 600))
+        wx.Frame.__init__(self, None, -1, title="jira-cstm.qualcomm.com", size=(1000, 600))
         self.Center()
         self.panel = wx.Panel(self, -1)
         main_box = wx.BoxSizer(wx.VERTICAL)  # 容纳其他所有容器的box
@@ -24,13 +24,16 @@ class Client(wx.Frame):
 
     def __open_login(self):
         login = Login()
-        res = login.Show()
-        login.TopLevel = True
+        result = login.ShowModal()
+        if result == wx.ID_CANCEL:
+            login.Destroy()
+            self.Destroy()
+        del login
 
     def __init_tool_box(self):
         toolbar_box = wx.BoxSizer(wx.HORIZONTAL)  # 工具栏
-        self.Start_Button = wx.Button(self.panel, -1, 'ST',size=(-1,-1)) #开始运行
-        self.Result_Button = wx.Button(self.panel, -1, 'RT',size=(-1,-1)) #打开报告
+        self.Start_Button = wx.Button(self.panel, -1, 'New Query', size=(-1,-1))
+        self.Result_Button = wx.Button(self.panel, -1, 'Query', size=(-1,-1))
         toolbar_box.Add(self.Start_Button)
         toolbar_box.Add(self.Result_Button)
         return toolbar_box
