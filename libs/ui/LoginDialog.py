@@ -1,6 +1,6 @@
 # -*- encoding:UTF-8 -*-
 import wx
-
+from libs.JIRA import JI
 """
 Author：You Wu
 

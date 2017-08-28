@@ -1,5 +1,4 @@
 from libs.ui.Client import Client
-from libs.ui.LoginDialog import Login
 import wx
 
 
