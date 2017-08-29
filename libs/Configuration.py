@@ -1,3 +1,0 @@
-import JIRA
-
-jira = ''

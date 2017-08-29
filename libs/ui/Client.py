@@ -1,5 +1,6 @@
 # -*- encoding:UTF-8 -*-
-from libs.ui.LoginDialog import Login
+from libs.ui.LoginDialog import LoginDialog
+from libs.ui.IssueDialog import IssueDialog
 import wx
 import wx.grid
 import wx.lib.agw.customtreectrl as CT
@@ -20,10 +21,10 @@ class Client(wx.Frame):
         main_box.Add(toolbar_box, 1, wx.EXPAND)
         main_box.Add(tree_and_grid_box, 7, wx.EXPAND)
         self.panel.SetSizer(main_box)
-        self.__open_login()
+        #self.__open_login()
 
     def __open_login(self):
-        login = Login()
+        login = LoginDialog()
         result = login.ShowModal()
         if result == wx.ID_CANCEL:
             login.Destroy()
@@ -32,10 +33,12 @@ class Client(wx.Frame):
 
     def __init_tool_box(self):
         toolbar_box = wx.BoxSizer(wx.HORIZONTAL)  # 工具栏
-        self.Start_Button = wx.Button(self.panel, -1, 'New Query', size=(-1,-1))
-        self.Result_Button = wx.Button(self.panel, -1, 'Query', size=(-1,-1))
-        toolbar_box.Add(self.Start_Button)
-        toolbar_box.Add(self.Result_Button)
+        create_issue_button = wx.Button(self.panel, -1, 'Create Issue', size=(-1, -1))
+        self.Bind(wx.EVT_BUTTON, self.__create_issue, create_issue_button)
+
+
+        toolbar_box.Add(create_issue_button)
+
         return toolbar_box
 
     def __init_grid_and_tree_box(self):
@@ -59,9 +62,12 @@ class Client(wx.Frame):
         tree_and_grid_box.Add(grid_module, 8, wx.EXPAND)
         return tree_and_grid_box
 
-
-
-
+    def __create_issue(self, event):
+        issue = IssueDialog()
+        result = issue.ShowModal()
+        if result == wx.ID_CANCEL:
+            issue.Destroy()
+        print 'hello world'
 
 
 if __name__ == '__main__':

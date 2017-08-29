@@ -1,13 +1,15 @@
 # -*- encoding:UTF-8 -*-
 import wx
-from libs.JIRA import JI
+import threading
+import urllib2
+from base64 import encodestring
 """
 Author：You Wu
 
 """
 
 
-class Login(wx.Dialog):
+class LoginDialog(wx.Dialog):
     def __init__(self):
         wx.Dialog.__init__(self, None, -1, title="QC Login", size=(280, 230))
         self.Center()
@@ -24,8 +26,8 @@ class Login(wx.Dialog):
         #self.auto_login_checkbox = wx.CheckBox(panel, -1, label='Auto Login', pos=(160, 90))
         self.auto_login_checkbox = wx.CheckBox(panel, -1, label='Useless  B', pos=(160, 90))
         login_button = wx.Button(panel, wx.ID_OK, label='Login', pos=(40, 120), size=(90, -1))
-        cancel_button = wx.Button(panel, wx.ID_CANCEL, label='Cancel', pos=(150, 120), size=(90, -1))
-        self.info_text = wx.StaticText(panel, -1, pos=(20, 160), size=(240, -1))
+        wx.Button(panel, wx.ID_CANCEL, label='Cancel', pos=(150, 120), size=(90, -1))
+        self.info_text = wx.StaticText(panel, -1, pos=(0, 160), size=(-1, -1))
         self.Bind(wx.EVT_BUTTON, self.__on_login, login_button)
 
 
@@ -37,19 +39,33 @@ class Login(wx.Dialog):
         pass
 
     def __on_login(self, event):
-        import random
-        dd = random.choice(['Success', 'Fail','Warm','sdd','dsadsa'])
-        self.__on_refresh_info(text=dd)
-        if dd == 'Success':
+        account = self.account_input.GetValue()
+        password = self.password_input.GetValue()
+        if not account or not password:
+            self.refresh_info_text(text='Please input account or password', type='E')
+        else:
+            self.authorization(account, password)
+
+
+    def authorization(self, account, password):
+        request = urllib2.Request('https://jira-cstm-tools.qualcomm.com/jira/')
+        request.add_header('Authorization', 'Basic %s' % encodestring('%s:%s' % (account,password))[:-1])
+        try:
+            urllib2.urlopen(request)
+            self.refresh_info_text('                         Success.                         ', 'I')
             self.Destroy()
+        except urllib2.HTTPError:
+            self.refresh_info_text('Authorization Fail: Account or Password is incorrect.', 'E')
+        except urllib2.URLError:
+            self.refresh_info_text('Connection Fail: Please check whether JIRA can visit normally.', 'E')
 
 
 
-    def __on_refresh_info(self, text):
+    def refresh_info_text(self, text, type):
         self.info_text.Label = text
 
 if __name__ == '__main__':
     app = wx.App()
-    login = Login()
+    login = LoginDialog()
     login.Show()
     app.MainLoop()
