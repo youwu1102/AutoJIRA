@@ -22,9 +22,11 @@ def __fields(issue_dialog):
     fields[ic.mm_functionality.get(ic.id)] = __mm_functionality(issue_dialog)
     fields[ic.ui_functionality.get(ic.id)] = __ui_functionality(issue_dialog)
     fields[ic.bsp_functionality.get(ic.id)] = __bsp_functionality(issue_dialog)
+    fields[ic.la_functionality.get(ic.id)] = __la_functionality(issue_dialog)
     fields[ic.area.get(ic.id)] = __area(issue_dialog)
     fields[ic.assignee.get(ic.id)] = __assignee(issue_dialog)
     fields[ic.components.get(ic.id)] = __components(issue_dialog)
+    fields[ic.product_name.get(ic.id)] = __product_name(issue_dialog)
     return fields
 
 def __components(issue_dialog):
@@ -61,6 +63,10 @@ def __ui_functionality(issue_dialog):
     ui_functionality['value'] = str(issue_dialog.ui_functionality_choice.GetStringSelection())
     return ui_functionality
 
+def __la_functionality(issue_dialog):
+    la_functionality = dict()
+    la_functionality['value'] = str(issue_dialog.la_functionality_choice.GetStringSelection())
+    return la_functionality
 
 def __repeatability(issue_dialog):
     repeatability = dict()
@@ -116,10 +122,6 @@ def __product_name(issue_dialog):
 def __log_link(issue_dialog):
     return str(issue_dialog.log_link_input.GetValue())
 
-def __product_name(issue_dialog):
-    product_name = dict()
-    product_name['value'] = str(issue_dialog.product_name_choice.GetStringSelection())
-    return product_name
 
 def __assignee(issue_dialog):
     assignee = dict()
@@ -129,13 +131,5 @@ def __assignee(issue_dialog):
     return assignee
 
 
-data = {
-        "components": [
-            {
-                "name": "AP-LA-Stability"
-            }
-        ],
-        "customfield_14930": "10-NN519-110",
-        "customfield_14929": "2a16f62"
-    }
+
 

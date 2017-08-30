@@ -181,8 +181,8 @@ class IssueDialog(wx.Dialog):
         if not self.__check_required_item_is_correct():
             return
         dict_issue = Issue.generate(self)
-        print dict_issue
         jira = JIRA('qrd_automation', '1234Abcd')
+        #jira.authorization()
         print jira.post(data=dict_issue)
 
     def __check_required_item_is_correct(self):

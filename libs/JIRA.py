@@ -94,7 +94,8 @@ class JIRA(object):
         url='https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue'
         # with open ('C:\Users\c_youwu\Desktop\jira\JiraTemplate.txt') as r:
         #     self.data= r.read()
-        data =str(data)
+        print self.data
+        print data
         headers = {
             'Content-Type': 'application/json',
             'Authorization': 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1],

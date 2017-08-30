@@ -15,14 +15,14 @@ issue_type = {
 }
 
 crash = {
-    choice: ['', 'No', 'YES'],
+    choice: ['', 'No', 'Yes'],
     default: 'No',
     id: 'customfield_12904'
 }
 
 repeatability = {
     choice: ['', 'Not Attempted', 'Cannot Replicate', 'Replicates With Effort', 'Easily Replicates'],
-    default: 'Replicates With Effort',
+    default: 'Easily Replicates',
     id: 'customfield_10455'
 }
 
@@ -34,7 +34,7 @@ severity = {
 
 components ={
     choice: ['AP-AU_Sanity', 'AP-3rdPartyAPK', 'AP-LA-Stability', 'test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9'],
-    default: 'AP-AU_Sanity|AP-3rdPartyAPK|AP-LA-Stability',
+    default: 'AP-LA-Stability',
     id: 'components'
 }
 
@@ -59,7 +59,7 @@ test_group = {
 
 test_phase = {
     choice: ['', 'Bring-Up', 'Pre-FC', 'Pre-Silicon', 'FC-to-CS', 'Post-CS'],
-    default: 'FC-to-CS',
+    default: 'Pre-FC',
     id: 'customfield_10456'
 }
 
@@ -78,7 +78,7 @@ la_functionality = {
              'Linux_Stability_S3SystemStability', 'LinuxCommon', 'Logging', 'Memory', 'OTA/Recovery', 'PMIC', 'Power',
              'QDSS', 'Sensors', 'ThermalDriver', 'Tools', 'Android_Telephony_IMS_VT', 'VRService', 'VRSDK', 'Drones_afc',
              'Drones_dspal', 'Drones_flight'],
-    default: 'Not LA Issue',
+    default: 'Linux_Stability_KernelStability',
     id: 'customfield_21725'
 }
 
@@ -102,8 +102,8 @@ cnss_functionality = {
 }
 
 bsp_functionality = {
-    choice: ['', 'BAM/TSENS/ADC', 'Clock', 'DDR', 'Diag/QMI/IPCRouter'],
-    default: '',
+    choice: ['', 'BAM/TSENS/ADC', 'Clock', 'DDR', 'Diag/QMI/IPCRouter', 'Not BSP Issue'],
+    default: 'Not BSP Issue',
     id: 'customfield_21736'
 }
 
