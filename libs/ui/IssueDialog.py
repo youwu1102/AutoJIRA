@@ -1,18 +1,15 @@
-# -*- encoding:UTF-8 -*-
 import wx
 import IssueConfiguration as ic
 import Issue
-
-"""
-Author：You Wu
-
-"""
+from libs.JIRA import JIRA
 
 
 class IssueDialog(wx.Dialog):
     def __init__(self):
         wx.Dialog.__init__(self, None, -1, title="Create Issue", size=(745, 775))
         self.Center()
+        print type('asdsad')
+        print type(u'asdsad')
         self.__init_ui()
 
     def __static_text(self, pos, label):
@@ -184,6 +181,9 @@ class IssueDialog(wx.Dialog):
         if not self.__check_required_item_is_correct():
             return
         dict_issue = Issue.generate(self)
+        print dict_issue
+        jira = JIRA('qrd_automation', '1234Abcd')
+        print jira.post(data=dict_issue)
 
     def __check_required_item_is_correct(self):
         error_list = list()

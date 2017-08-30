@@ -88,20 +88,19 @@ class JIRA(object):
         print response.read()
 
     def get(self):
-        print self.post(self.__base_url, self.data)
+        print self.post(self.data)
 
-    def post(self, url, data):
-        url='https://jira-cstm.qualcomm.com/jira/rest/api/2/issue'
+    def post(self, data):
+        url='https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue'
         # with open ('C:\Users\c_youwu\Desktop\jira\JiraTemplate.txt') as r:
         #     self.data= r.read()
-        print self.data
+        data =str(data)
         headers = {
             'Content-Type': 'application/json',
             'Authorization': 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1],
             'Accept':'*/*'
         }
-        request = urllib2.Request(url=url, headers=headers, data=json.dumps(self.data))
-
+        request = urllib2.Request(url=url, headers=headers, data=json.dumps(data))
         response = urllib2.urlopen(request)
         return response.read()
 

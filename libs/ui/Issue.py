@@ -17,95 +17,119 @@ def __fields(issue_dialog):
     fields[ic.test_group.get(ic.id)] = __test_group(issue_dialog)
     fields[ic.test_phase.get(ic.id)] = __test_phase(issue_dialog)
     fields[ic.crash.get(ic.id)] = __crash(issue_dialog)
+    fields[ic.repeatability.get(ic.id)] = __repeatability(issue_dialog)
+    fields[ic.cnss_functionality.get(ic.id)] = __cnss_functionality(issue_dialog)
+    fields[ic.mm_functionality.get(ic.id)] = __mm_functionality(issue_dialog)
+    fields[ic.ui_functionality.get(ic.id)] = __ui_functionality(issue_dialog)
+    fields[ic.bsp_functionality.get(ic.id)] = __bsp_functionality(issue_dialog)
+    fields[ic.area.get(ic.id)] = __area(issue_dialog)
+    fields[ic.assignee.get(ic.id)] = __assignee(issue_dialog)
+    fields[ic.components.get(ic.id)] = __components(issue_dialog)
+    return fields
 
-    print fields
+def __components(issue_dialog):
+    string = issue_dialog.component_input.GetValue()
+    components = string.split('|')
+    component_list= list()
+    for component in components:
+        component_list.append({'name': str(component)})
+    return component_list
 
+def __area(issue_dialog):
+    area = dict()
+    area['value'] = str(issue_dialog.area_choice.GetStringSelection())
+    return area
+
+def __cnss_functionality(issue_dialog):
+    cnss_functionality = dict()
+    cnss_functionality['value'] = str(issue_dialog.cnss_functionality_choice.GetStringSelection())
+    return cnss_functionality
+
+def __mm_functionality(issue_dialog):
+    mm_functionality = dict()
+    mm_functionality['value'] = str(issue_dialog.mm_functionality_choice.GetStringSelection())
+    return mm_functionality
+
+def __bsp_functionality(issue_dialog):
+    bsp_functionality = dict()
+    bsp_functionality['value'] = str(issue_dialog.bsp_functionality_choice.GetStringSelection())
+    return bsp_functionality
+
+
+def __ui_functionality(issue_dialog):
+    ui_functionality = dict()
+    ui_functionality['value'] = str(issue_dialog.ui_functionality_choice.GetStringSelection())
+    return ui_functionality
+
+
+def __repeatability(issue_dialog):
+    repeatability = dict()
+    repeatability['value'] = str(issue_dialog.repeatability_choice.GetStringSelection())
+    return repeatability
+
+
+def __crash(issue_dialog):
+    crash = dict()
+    crash['value'] = str(issue_dialog.crash_choice.GetStringSelection())
+    return crash
 
 
 def __test_phase(issue_dialog):
     test_phase = dict()
-    test_phase['value'] = issue_dialog.test_phase_choice.GetStringSelection()
+    test_phase['value'] = str(issue_dialog.test_phase_choice.GetStringSelection())
     return test_phase
 
 def __test_group(issue_dialog):
     test_group = dict()
-    test_group['value'] = issue_dialog.test_group_choice.GetStringSelection()
+    test_group['value'] = str(issue_dialog.test_group_choice.GetStringSelection())
     return test_group
 
 
 def __project(issue_dialog):
     project =dict()
-    project['key'] = issue_dialog.project_choice.GetStringSelection()
+    project['key'] = str(issue_dialog.project_choice.GetStringSelection())
     return project
 
 def __summary(issue_dialog):
-    return issue_dialog.summary_input.GetValue()
+    return str(issue_dialog.summary_input.GetValue())
 
 def __description(issue_dialog):
-    return issue_dialog.description_input.GetValue()
+    return str(issue_dialog.description_input.GetValue())
 
 def __issue_type(issue_dialog):
     issue_type = dict()
-    issue_type['name'] = issue_dialog.issue_type_choice.GetStringSelection()
+    issue_type['name'] = str(issue_dialog.issue_type_choice.GetStringSelection())
     return issue_type
 
 def __severity(issue_dialog):
     severity = dict()
-    severity['value'] = issue_dialog.severity_choice.GetStringSelection()
+    severity['value'] = str(issue_dialog.severity_choice.GetStringSelection())
     return severity
 
 
 def __product_name(issue_dialog):
     product_name = dict()
-    product_name['value'] = issue_dialog.product_name_choice.GetStringSelection()
+    product_name['value'] = str(issue_dialog.product_name_choice.GetStringSelection())
     return product_name
 
 
 def __log_link(issue_dialog):
-    return issue_dialog.log_link_input.GetValue()
+    return str(issue_dialog.log_link_input.GetValue())
 
 def __product_name(issue_dialog):
     product_name = dict()
-    product_name['value'] = issue_dialog.product_name_choice.GetStringSelection()
+    product_name['value'] = str(issue_dialog.product_name_choice.GetStringSelection())
     return product_name
 
-
+def __assignee(issue_dialog):
+    assignee = dict()
+    account = 'c_youwu'
+    assignee['name'] = account
+    assignee['emailAddress'] = '%s@qti.qualcomm.com' % account
+    return assignee
 
 
 data = {
-
-        "customfield_12904": {
-            "value": "No"
-        },
-        "customfield_10455": {
-            "value": "Easily Replicates"
-        },
-        "customfield_23010": {
-            "value": "NotWCNIssue"
-        },
-        "customfield_21725": {
-            "value": "Linux_Stability_KernelStability"
-        },
-        "customfield_21726": {
-            "value": "Not MM Issue"
-        },
-        "customfield_21727": {
-            "value": "Not UI Issue"
-        },
-        "customfield_21736": {
-            "value": "Not BSP Issue"
-        },
-        "customfield_10388": {
-            "value": "LA"
-        },
-        "assignee": {
-            "name": "c_youwu",
-            "emailAddress": "c_youwu@qti.qualcomm.com"
-        },
-        # "creator":{
-        #     "name": "c_youwu",
-        #     "emailAddress": "c_youwu@qti.qualcomm.com"
-        # },
         "components": [
             {
                 "name": "AP-LA-Stability"
@@ -114,4 +138,4 @@ data = {
         "customfield_14930": "10-NN519-110",
         "customfield_14929": "2a16f62"
     }
-}
+

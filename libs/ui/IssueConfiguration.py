@@ -22,7 +22,8 @@ crash = {
 
 repeatability = {
     choice: ['', 'Not Attempted', 'Cannot Replicate', 'Replicates With Effort', 'Easily Replicates'],
-    default: 'Replicates With Effort'
+    default: 'Replicates With Effort',
+    id: 'customfield_10455'
 }
 
 severity = {
@@ -33,7 +34,8 @@ severity = {
 
 components ={
     choice: ['AP-AU_Sanity', 'AP-3rdPartyAPK', 'AP-LA-Stability', 'test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9'],
-    default: 'AP-LA-Stability'
+    default: 'AP-AU_Sanity|AP-3rdPartyAPK|AP-LA-Stability',
+    id: 'components'
 }
 
 product_name = {
@@ -63,7 +65,8 @@ test_phase = {
 
 area = {
     choice: ['', 'BSP', 'BT', 'FM', 'GPS', 'LA', 'MM', 'NFC', 'UI', 'WLAN'],
-    default: 'LA'
+    default: 'LA',
+    id: 'customfield_10388'
 }
 
 la_functionality = {
@@ -75,46 +78,54 @@ la_functionality = {
              'Linux_Stability_S3SystemStability', 'LinuxCommon', 'Logging', 'Memory', 'OTA/Recovery', 'PMIC', 'Power',
              'QDSS', 'Sensors', 'ThermalDriver', 'Tools', 'Android_Telephony_IMS_VT', 'VRService', 'VRSDK', 'Drones_afc',
              'Drones_dspal', 'Drones_flight'],
-    default: 'Not LA Issue'
+    default: 'Not LA Issue',
+    id: 'customfield_21725'
 }
 
 mm_functionality = {
     choice: ['', 'Android_Audio_ACDB', 'Android_Audio_Codec_Driver', 'Android_Audio_Framework', 'Not MM Issue'],
-    default: 'Not MM Issue'
+    default: 'Not MM Issue',
+    id: 'customfield_21726'
 }
 
 ui_functionality = {
     choice: ['APP_Framework', 'Camera', 'China_Carrier_APPs', 'Contacts', 'Not UI Issue'],
-    default: 'Not UI Issue'
+    default: 'Not UI Issue',
+    id: 'customfield_21727'
 }
 
 cnss_functionality = {
     choice: ['', 'NotWCNIssue', 'WLAN_Host', 'WLAN_FW', 'WLAN_Coex', 'BT_Host', 'BT_FW', 'BT_Coex', 'FM_Host',
              'FM_FW', 'FM_Coex', 'NFC_Host', 'NFC_FW', 'NFC_Coex', 'GPS', 'Drones_connectivity'],
-    default: 'NotWCNIssue'
+    default: 'NotWCNIssue',
+    id: 'customfield_23010'
 }
 
 bsp_functionality = {
     choice: ['', 'BAM/TSENS/ADC', 'Clock', 'DDR', 'Diag/QMI/IPCRouter'],
-    default: ''
+    default: '',
+    id: 'customfield_21736'
 }
 
 
 assignee = {
     choice: [],
-    default: 'Assign to me'
+    default: 'Assign to me',
+    id: 'assignee'
 }
 
 customer_name = {
     choice: ['', 'BBK/Vivo', 'Datang', 'Feixun', 'Foxda', 'Gionee', 'Heyuan/Tinno', 'Hisense', 'Huaqin',
              'Huawei', 'Huiye', 'Internal', 'Lenovo', 'Longcheer', 'MOTO(Motorola)', 'OPPO', 'Others', 'TCL',
              'Tianyu/K-Touch', 'Wingtech', 'Xiaomi', 'Yulong/Coolpad', 'ZTE'],
-    default: ''
+    default: '',
+    id: 'customfield_10805'
 }
 
 category_type = {
     choice: ['', 'Function', 'Stability', 'Power', 'Performance', 'Compatibility', 'Thermal'],
-    default: ''
+    default: '',
+    id: 'customfield_11073'
 }
 
 summary = {
@@ -128,5 +139,6 @@ description = {
 }
 
 log_link = {
-    default: '\\APTCN'
+    default: '\\\\APTCN',
+    id: 'customfield_21324'
 }
