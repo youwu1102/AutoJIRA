@@ -1,6 +1,7 @@
 # -*- encoding:UTF-8 -*-
 import wx
 import IssueConfiguration as ic
+import Issue
 
 """
 Author：You Wu
@@ -35,8 +36,8 @@ class IssueDialog(wx.Dialog):
         height11 = height10 + 30
         height12 = height11 + 30
         height13 = height12 + 30
-        height14 = height13 + 30
-        height15 = height14 + 37
+        height14 = height13 + 40
+
         static_text_width = 105
         x_gap = 5
         width1 = 15
@@ -69,75 +70,191 @@ class IssueDialog(wx.Dialog):
 
         self.__static_text(pos=(width3, height2), label='Severity*')
         self.severity_choice = wx.Choice(self.panel, -1, pos=(width4, height2), choices=ic.severity.get(ic.choice), size=(120, -1))
-        self.repeatability_choice.SetStringSelection(ic.severity.get(ic.default))
+        self.severity_choice.SetStringSelection(ic.severity.get(ic.default))
 
         self.__static_text(pos=(width5, height2), label='Component/s*')
-        self.component = wx.CheckListBox(self.panel, -1, pos=(width6, height2), choices=ic.severity.get(ic.choice), size=(120, -1))
+        self.component_input = wx.TextCtrl(self.panel, -1, pos=(width6, height2+1), size=(100, 24), style=wx.TE_READONLY)
+        self.component_input.SetValue(ic.components.get(ic.default))
+        component_button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height2), size=(20, -1))
+        self.Bind(wx.EVT_BUTTON, self.on_components, component_button)
 
         self.__static_text(pos=(width1, height3), label='Product Name*')
-        self.project_choice = wx.Choice(self.panel, -1, pos=(width2, height3), choices=['1'], size=(120, -1))
+        self.product_name_choice = wx.Choice(self.panel, -1, pos=(width2, height3), choices=ic.product_name.get(ic.choice), size=(120, -1))
+        self.product_name_choice.SetStringSelection(ic.product_name.get(ic.default))
+
+
         self.__static_text(pos=(width3, height3), label='Test Group*')
-        self.issue_type_choice = wx.Choice(self.panel, -1, pos=(width4, height3), choices=['2'], size=(120, -1))
+        self.test_group_choice = wx.Choice(self.panel, -1, pos=(width4, height3), choices=ic.test_group.get(ic.choice), size=(120, -1))
+        self.test_group_choice.SetStringSelection(ic.test_group.get(ic.default))
+
         self.__static_text(pos=(width5, height3), label='Test Phase*')
-        self.crash_choice = wx.Choice(self.panel, -1, pos=(width6, height3), choices=['3'], size=(120, -1))
+        self.test_phase_choice = wx.Choice(self.panel, -1, pos=(width6, height3), choices=ic.test_phase.get(ic.choice), size=(120, -1))
+        self.test_phase_choice.SetStringSelection(ic.test_phase.get(ic.default))
 
         self.__static_text(pos=(width1, height4), label='Area')
-        self.project_choice = wx.Choice(self.panel, -1, pos=(width2, height4), choices=['1'], size=(120, -1))
+        self.area_choice = wx.Choice(self.panel, -1, pos=(width2, height4), choices=ic.area.get(ic.choice), size=(120, -1))
+        self.area_choice.SetStringSelection(ic.area.get(ic.default))
+
         self.__static_text(pos=(width3, height4), label='LA Functionality')
-        self.issue_type_choice = wx.Choice(self.panel, -1, pos=(width4, height4), choices=['2'], size=(120, -1))
+        self.la_functionality_choice = wx.Choice(self.panel, -1, pos=(width4, height4), choices=ic.la_functionality.get(ic.choice), size=(120, -1), style=wx.LB_HSCROLL)
+        self.la_functionality_choice.SetStringSelection(ic.la_functionality.get(ic.default))
+
         self.__static_text(pos=(width5, height4), label='MM Functionality')
-        self.crash_choice = wx.Choice(self.panel, -1, pos=(width6, height4), choices=['3'], size=(120, -1))
+        self.mm_functionality_choice = wx.Choice(self.panel, -1, pos=(width6, height4), choices=ic.mm_functionality.get(ic.choice), size=(120, -1))
+        self.mm_functionality_choice.SetStringSelection(ic.mm_functionality.get(ic.default))
 
         self.__static_text(pos=(width1, height5), label='UI Functionality')
-        self.project_choice = wx.Choice(self.panel, -1, pos=(width2, height5), choices=['1'], size=(120, -1))
+        self.ui_functionality_choice = wx.Choice(self.panel, -1, pos=(width2, height5), choices=ic.ui_functionality.get(ic.choice), size=(120, -1))
+        self.ui_functionality_choice.SetStringSelection(ic.ui_functionality.get(ic.default))
+
         self.__static_text(pos=(width3, height5), label='CNSS Functionality')
-        self.issue_type_choice = wx.Choice(self.panel, -1, pos=(width4, height5), choices=['2'], size=(120, -1))
+        self.cnss_functionality_choice = wx.Choice(self.panel, -1, pos=(width4, height5), choices=ic.cnss_functionality.get(ic.choice), size=(120, -1))
+        self.cnss_functionality_choice.SetStringSelection(ic.cnss_functionality.get(ic.default))
+
         self.__static_text(pos=(width5, height5), label='BSP Functionality')
-        self.crash_choice = wx.Choice(self.panel, -1, pos=(width6, height5), choices=['3'], size=(120, -1))
+        self.bsp_functionality_choice = wx.Choice(self.panel, -1, pos=(width6, height5), choices=ic.bsp_functionality.get(ic.choice), size=(120, -1))
+        self.bsp_functionality_choice.SetStringSelection(ic.bsp_functionality.get(ic.default))
 
         self.__static_text(pos=(width1, height6), label='Assignee')
-        self.project_choice = wx.Choice(self.panel, -1, pos=(width2, height6), choices=['1'], size=(120, -1))
+        self.assignee_input = wx.TextCtrl(self.panel, -1, pos=(width2, height6+1), size=(100, 24), style=wx.TE_READONLY)
+        self.assignee_input.SetValue(ic.assignee.get(ic.default))
+        assignee_button = wx.Button(self.panel, -1, label='...', pos=(width2+100, height6), size=(20, -1))
+        assignee_button.Disable()
+        self.Bind(wx.EVT_BUTTON, self.on_assignee, assignee_button)
+        # complete here
+
         self.__static_text(pos=(width3, height6), label='Customer Name')
-        self.issue_type_choice = wx.Choice(self.panel, -1, pos=(width4, height6), choices=['2'], size=(120, -1))
+        self.customer_name_choice = wx.Choice(self.panel, -1, pos=(width4, height6), choices=ic.customer_name.get(ic.choice), size=(120, -1))
+        self.customer_name_choice.SetStringSelection(ic.customer_name.get(ic.default))
+
         self.__static_text(pos=(width5, height6), label='Labels')
-        self.crash_choice = wx.Choice(self.panel, -1, pos=(width6, height6), choices=['3'], size=(120, -1))
+        self.labels_choice = wx.Choice(self.panel, -1, pos=(width6, height6), choices=['3'], size=(120, -1))
+        self.labels_choice.Disable()
 
         self.__static_text(pos=(width1, height7), label='Sprint')
-        self.project_choice = wx.Choice(self.panel, -1, pos=(width2, height7), choices=['1'], size=(120, -1))
+        self.sprint_choice = wx.Choice(self.panel, -1, pos=(width2, height7), choices=['1'], size=(120, -1))
+        self.sprint_choice.Disable()
+
         self.__static_text(pos=(width3, height7), label='Category Type')
-        self.issue_type_choice = wx.Choice(self.panel, -1, pos=(width4, height7), choices=['2'], size=(120, -1))
+        self.category_type_choice = wx.Choice(self.panel, -1, pos=(width4, height7), choices=ic.category_type.get(ic.choice), size=(120, -1))
+        self.category_type_choice.SetStringSelection(ic.category_type.get(ic.default))
 
         self.__static_text(pos=(width1, height8), label='Summary*')
         self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width2, height8), size=(590, -1))
+        self.summary_input.SetValue(ic.summary.get(ic.default))
+
         self.__static_text(pos=(width1, height9), label='Description*')
         self.description_input = wx.TextCtrl(self.panel, -1, pos=(width2, height9), size=(590, 300), style=wx.TE_MULTILINE)
+        self.description_input.SetValue(ic.description.get(ic.default))
+
         self.__static_text(pos=(width1, height10), label='Log link*')
         self.log_link_input = wx.TextCtrl(self.panel, -1, pos=(width2, height10), size=(590, -1))
-
+        self.log_link_input.SetValue(ic.log_link.get(ic.default))
 
         self.__static_text(pos=(width1, height11), label='SR Number')
-        self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width2, height11), size=(240, -1))
+        self.sr_number_input = wx.TextCtrl(self.panel, -1, pos=(width2, height11), size=(240, -1))
         self.__static_text(pos=(width7, height11), label='External JIRA ID')
-        self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width8, height11), size=(240, -1))
+        self.external_jira_id_input = wx.TextCtrl(self.panel, -1, pos=(width8, height11), size=(240, -1))
 
         self.__static_text(pos=(width1, height12), label='Serial Number')
-        self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width2, height12), size=(240, -1))
+        self.serial_number_input = wx.TextCtrl(self.panel, -1, pos=(width2, height12), size=(240, -1))
         self.__static_text(pos=(width7, height12), label='MCN number')
-        self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width8, height12), size=(240, -1))
+        self.mcn_number_input = wx.TextCtrl(self.panel, -1, pos=(width8, height12), size=(240, -1))
         self.__static_text(pos=(width1, height13), label='MetaBuildLocation')
-        self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width2, height13), size=(590, -1))
+        self.meta_build_location_input = wx.TextCtrl(self.panel, -1, pos=(width2, height13), size=(590, -1))
 
         create_button = wx.Button(self.panel, -1, label='Create', pos=(550, height14), size=(80, 30))
         cancel_button = wx.Button(self.panel, wx.ID_CANCEL, label='Cancel', pos=(635, height14), size=(80, 30))
-        self.auto_login_checkbox = wx.CheckBox(self.panel, -1, label='Save Current As The Default', pos=(550, height15))
+        import_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\import.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 18, height14 + 8), size=(34, 34))
+        export_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\export.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 52, height14 + 8), size=(34, 34))
+        save_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\export.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 86, height14 + 8), size=(34, 34))
+        self.Bind(wx.EVT_BUTTON, self.on_create, create_button)
 
-        wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\import.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 18, height14 + 8), size=(34, 34))
-        wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\export.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 52, height14 + 8), size=(34, 34))
+    def on_components(self, event):
+        components = ComponentsDialog(self.component_input.GetValue(), self.Position)
+        result = components.ShowModal()
+        if result == wx.ID_OK:
+            self.component_input.SetValue(components.get_checked_item())
+        components.Destroy()
+
+    def on_assignee(self, event):
+        print 'Not Ready'
+
+    def on_create(self, event):
+        if not self.__check_required_item_is_correct():
+            return
+        dict_issue = Issue.generate(self)
+
+    def __check_required_item_is_correct(self):
+        error_list = list()
+        if not self.project_choice.GetStringSelection():
+            error_list.append('Project')
+        if not self.issue_type_choice.GetStringSelection():
+            error_list.append('Issue Type')
+        if not self.crash_choice.GetStringSelection():
+            error_list.append('Crash')
+        if not self.repeatability_choice.GetStringSelection():
+            error_list.append('Repeatability')
+        if not self.severity_choice.GetStringSelection():
+            error_list.append('Severity')
+        if not self.component_input.GetValue():
+            error_list.append('Components')
+        if not self.product_name_choice.GetStringSelection():
+            error_list.append('Product Name')
+        if not self.test_group_choice.GetStringSelection():
+            error_list.append('Test Group')
+        if not self.test_phase_choice.GetStringSelection():
+            error_list.append('Test Phase')
+        if not self.summary_input.GetValue():
+            error_list.append('Summary')
+        if not self.description_input.GetValue():
+            error_list.append('Description')
+        if not self.log_link_input.GetValue():
+            error_list.append('Log Link')
+        if error_list:
+            msg = wx.MessageDialog(self.panel, message='Please complete with the information required!\n\n' + '\n'.join(error_list),
+                                   caption="Error", style=wx.OK, pos=wx.DefaultPosition)
+            msg.ShowModal()
+            msg.Destroy()
+            return False
+        return True
+
+
+
+
+class ComponentsDialog(wx.Dialog):
+    def __init__(self, items, pos):
+        wx.Dialog.__init__(self, None, -1, title="Components", size=(210, 250))
+        panel = wx.Panel(self)
+        x, y = pos
+        self.SetPosition((x+720, y+70))
+        self.components = wx.CheckListBox(panel, -1, choices=ic.components.get(ic.choice), size=(207, 190))
+        self.__set_check_item(items=items)
+        wx.Button(panel, wx.ID_OK, label='Y', pos=(138, 190), size=(33,  33))
+        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(172, 190), size=(33, 33))
+
+    def get_checked_item(self):
+        checked_tuple = self.components.GetCheckedStrings()
+        return '|'.join(checked_tuple)
+
+    def __set_check_item(self, items):
+        if not items:
+            return
+        items = items.strip('|')
+        item_list = items.split('|')
+        check_list = list()
+        for x in xrange(self.components.Count):
+            if self.components.GetString(x) in item_list:
+                check_list.append(x)
+        self.components.SetChecked(check_list)
+
+
 
 if __name__ == '__main__':
     import time
     print time.time()
     app = wx.App()
+    print time.time()
     login = IssueDialog()
     print time.time()
     login.Show()
