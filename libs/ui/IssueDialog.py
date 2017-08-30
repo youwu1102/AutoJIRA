@@ -70,9 +70,9 @@ class IssueDialog(wx.Dialog):
         self.severity_choice.SetStringSelection(ic.severity.get(ic.default))
 
         self.__static_text(pos=(width5, height2), label='Component/s*')
-        self.component_input = wx.TextCtrl(self.panel, -1, pos=(width6, height2+1), size=(100, 24), style=wx.TE_READONLY)
+        self.component_input = wx.TextCtrl(self.panel, -1, pos=(width6, height2), size=(100, 24), style=wx.TE_READONLY)
         self.component_input.SetValue(ic.components.get(ic.default))
-        component_button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height2), size=(20, -1))
+        component_button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height2), size=(20, 24))
         self.Bind(wx.EVT_BUTTON, self.on_components, component_button)
 
         self.__static_text(pos=(width1, height3), label='Product Name*')
@@ -113,9 +113,9 @@ class IssueDialog(wx.Dialog):
         self.bsp_functionality_choice.SetStringSelection(ic.bsp_functionality.get(ic.default))
 
         self.__static_text(pos=(width1, height6), label='Assignee')
-        self.assignee_input = wx.TextCtrl(self.panel, -1, pos=(width2, height6+1), size=(100, 24), style=wx.TE_READONLY)
+        self.assignee_input = wx.TextCtrl(self.panel, -1, pos=(width2, height6), size=(100, 24), style=wx.TE_READONLY)
         self.assignee_input.SetValue(ic.assignee.get(ic.default))
-        assignee_button = wx.Button(self.panel, -1, label='...', pos=(width2+100, height6), size=(20, -1))
+        assignee_button = wx.Button(self.panel, -1, label='...', pos=(width2+100, height6), size=(20, 24))
         assignee_button.Disable()
         self.Bind(wx.EVT_BUTTON, self.on_assignee, assignee_button)
         # complete here
