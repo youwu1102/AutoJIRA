@@ -72,7 +72,7 @@ class IssueDialog(wx.Dialog):
         self.__static_text(pos=(width5, height2), label='Component/s*')
         self.component_input = wx.TextCtrl(self.panel, -1, pos=(width6, height2), size=(100, 24), style=wx.TE_READONLY)
         self.component_input.SetValue(ic.components.get(ic.default))
-        component_button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height2), size=(20, 24))
+        component_button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height2-1), size=(20, 26))
         self.Bind(wx.EVT_BUTTON, self.on_components, component_button)
 
         self.__static_text(pos=(width1, height3), label='Product Name*')
@@ -115,7 +115,7 @@ class IssueDialog(wx.Dialog):
         self.__static_text(pos=(width1, height6), label='Assignee')
         self.assignee_input = wx.TextCtrl(self.panel, -1, pos=(width2, height6), size=(100, 24), style=wx.TE_READONLY)
         self.assignee_input.SetValue(ic.assignee.get(ic.default))
-        assignee_button = wx.Button(self.panel, -1, label='...', pos=(width2+100, height6), size=(20, 24))
+        assignee_button = wx.Button(self.panel, -1, label='...', pos=(width2+100, height6-1), size=(20, 26))
         assignee_button.Disable()
         self.Bind(wx.EVT_BUTTON, self.on_assignee, assignee_button)
         # complete here
@@ -182,7 +182,6 @@ class IssueDialog(wx.Dialog):
             return
         dict_issue = Issue.generate(self)
         jira = JIRA('qrd_automation', '1234Abcd')
-        #jira.authorization()
         print jira.post(data=dict_issue)
 
     def __check_required_item_is_correct(self):
@@ -220,11 +219,9 @@ class IssueDialog(wx.Dialog):
         return True
 
 
-
-
 class ComponentsDialog(wx.Dialog):
     def __init__(self, items, pos):
-        wx.Dialog.__init__(self, None, -1, title="Components", size=(210, 250))
+        wx.Dialog.__init__(self, None, -1, title="Components", size=(210, 253))
         panel = wx.Panel(self)
         x, y = pos
         self.SetPosition((x+720, y+70))
@@ -249,6 +246,16 @@ class ComponentsDialog(wx.Dialog):
         self.components.SetChecked(check_list)
 
 
+class LabelDialog(wx.Dialog):
+    def __init__(self, items, pos):
+        wx.Dialog.__init__(self, None, -1, title="Label", size=(210, 253))
+        panel = wx.Panel(self)
+        x, y = pos
+        self.SetPosition((x+720, y+70))
+        self.components = wx.CheckListBox(panel, -1, choices=ic.components.get(ic.choice), size=(207, 190))
+        self.__set_check_item(items=items)
+        wx.Button(panel, wx.ID_OK, label='Y', pos=(138, 190), size=(33,  33))
+        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(172, 190), size=(33, 33))
 
 if __name__ == '__main__':
     import time
