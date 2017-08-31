@@ -2,15 +2,16 @@ import wx
 import IssueConfiguration as ic
 import Issue
 from libs.JIRA import JIRA
-
+from os.path import exists
+import libs.Utility
 
 class IssueDialog(wx.Dialog):
     def __init__(self):
         wx.Dialog.__init__(self, None, -1, title="Create Issue", size=(745, 775))
         self.Center()
-        print type('asdsad')
-        print type(u'asdsad')
+        default_profile = 'Default.xml'
         self.__init_ui()
+        self.__change_options(default_profile)
 
     def __static_text(self, pos, label):
         x, y = pos
@@ -48,73 +49,62 @@ class IssueDialog(wx.Dialog):
 
         self.__static_text(pos=(width1, height1), label='Project*')
         self.project_choice = wx.Choice(self.panel, -1, pos=(width2, height1), choices=ic.project.get(ic.choice), size=(120, -1))
-        self.project_choice.SetStringSelection(ic.project.get(ic.default))
         self.project_choice.Disable()
 
         self.__static_text(pos=(width3, height1), label='Issue Type*')
         self.issue_type_choice = wx.Choice(self.panel, -1, pos=(width4, height1), choices=ic.issue_type.get(ic.choice), size=(120, -1))
-        self.issue_type_choice.SetStringSelection(ic.issue_type.get(ic.default))
         self.issue_type_choice.Disable()
-
 
         self.__static_text(pos=(width5, height1), label='Crash*')
         self.crash_choice = wx.Choice(self.panel, -1, pos=(width6, height1), choices=ic.crash.get(ic.choice), size=(120, -1))
-        self.crash_choice.SetStringSelection(ic.crash.get(ic.default))
 
         self.__static_text(pos=(width1, height2), label='Repeatability*')
         self.repeatability_choice = wx.Choice(self.panel, -1, pos=(width2, height2), choices=ic.repeatability.get(ic.choice), size=(120, -1))
-        self.repeatability_choice.SetStringSelection(ic.repeatability.get(ic.default))
 
         self.__static_text(pos=(width3, height2), label='Severity*')
         self.severity_choice = wx.Choice(self.panel, -1, pos=(width4, height2), choices=ic.severity.get(ic.choice), size=(120, -1))
-        self.severity_choice.SetStringSelection(ic.severity.get(ic.default))
 
         self.__static_text(pos=(width5, height2), label='Component/s*')
         self.component_input = wx.TextCtrl(self.panel, -1, pos=(width6, height2), size=(100, 24), style=wx.TE_READONLY)
-        self.component_input.SetValue(ic.components.get(ic.default))
         component_button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height2-1), size=(20, 26))
         self.Bind(wx.EVT_BUTTON, self.on_components, component_button)
 
         self.__static_text(pos=(width1, height3), label='Product Name*')
         self.product_name_choice = wx.Choice(self.panel, -1, pos=(width2, height3), choices=ic.product_name.get(ic.choice), size=(120, -1))
-        self.product_name_choice.SetStringSelection(ic.product_name.get(ic.default))
-
 
         self.__static_text(pos=(width3, height3), label='Test Group*')
         self.test_group_choice = wx.Choice(self.panel, -1, pos=(width4, height3), choices=ic.test_group.get(ic.choice), size=(120, -1))
-        self.test_group_choice.SetStringSelection(ic.test_group.get(ic.default))
+
 
         self.__static_text(pos=(width5, height3), label='Test Phase*')
         self.test_phase_choice = wx.Choice(self.panel, -1, pos=(width6, height3), choices=ic.test_phase.get(ic.choice), size=(120, -1))
-        self.test_phase_choice.SetStringSelection(ic.test_phase.get(ic.default))
+
 
         self.__static_text(pos=(width1, height4), label='Area')
         self.area_choice = wx.Choice(self.panel, -1, pos=(width2, height4), choices=ic.area.get(ic.choice), size=(120, -1))
-        self.area_choice.SetStringSelection(ic.area.get(ic.default))
+
 
         self.__static_text(pos=(width3, height4), label='LA Functionality')
         self.la_functionality_choice = wx.Choice(self.panel, -1, pos=(width4, height4), choices=ic.la_functionality.get(ic.choice), size=(120, -1), style=wx.LB_HSCROLL)
-        self.la_functionality_choice.SetStringSelection(ic.la_functionality.get(ic.default))
+
 
         self.__static_text(pos=(width5, height4), label='MM Functionality')
         self.mm_functionality_choice = wx.Choice(self.panel, -1, pos=(width6, height4), choices=ic.mm_functionality.get(ic.choice), size=(120, -1))
-        self.mm_functionality_choice.SetStringSelection(ic.mm_functionality.get(ic.default))
 
         self.__static_text(pos=(width1, height5), label='UI Functionality')
         self.ui_functionality_choice = wx.Choice(self.panel, -1, pos=(width2, height5), choices=ic.ui_functionality.get(ic.choice), size=(120, -1))
-        self.ui_functionality_choice.SetStringSelection(ic.ui_functionality.get(ic.default))
+
 
         self.__static_text(pos=(width3, height5), label='CNSS Functionality')
         self.cnss_functionality_choice = wx.Choice(self.panel, -1, pos=(width4, height5), choices=ic.cnss_functionality.get(ic.choice), size=(120, -1))
-        self.cnss_functionality_choice.SetStringSelection(ic.cnss_functionality.get(ic.default))
+
 
         self.__static_text(pos=(width5, height5), label='BSP Functionality')
         self.bsp_functionality_choice = wx.Choice(self.panel, -1, pos=(width6, height5), choices=ic.bsp_functionality.get(ic.choice), size=(120, -1))
-        self.bsp_functionality_choice.SetStringSelection(ic.bsp_functionality.get(ic.default))
 
         self.__static_text(pos=(width1, height6), label='Assignee')
         self.assignee_input = wx.TextCtrl(self.panel, -1, pos=(width2, height6), size=(100, 24), style=wx.TE_READONLY)
-        self.assignee_input.SetValue(ic.assignee.get(ic.default))
+
         assignee_button = wx.Button(self.panel, -1, label='...', pos=(width2+100, height6-1), size=(20, 26))
         assignee_button.Disable()
         self.Bind(wx.EVT_BUTTON, self.on_assignee, assignee_button)
@@ -122,7 +112,6 @@ class IssueDialog(wx.Dialog):
 
         self.__static_text(pos=(width3, height6), label='Customer Name')
         self.customer_name_choice = wx.Choice(self.panel, -1, pos=(width4, height6), choices=ic.customer_name.get(ic.choice), size=(120, -1))
-        self.customer_name_choice.SetStringSelection(ic.customer_name.get(ic.default))
 
         self.__static_text(pos=(width5, height6), label='Labels')
         self.labels_choice = wx.Choice(self.panel, -1, pos=(width6, height6), choices=['3'], size=(120, -1))
@@ -134,29 +123,29 @@ class IssueDialog(wx.Dialog):
 
         self.__static_text(pos=(width3, height7), label='Category Type')
         self.category_type_choice = wx.Choice(self.panel, -1, pos=(width4, height7), choices=ic.category_type.get(ic.choice), size=(120, -1))
-        self.category_type_choice.SetStringSelection(ic.category_type.get(ic.default))
 
         self.__static_text(pos=(width1, height8), label='Summary*')
         self.summary_input = wx.TextCtrl(self.panel, -1, pos=(width2, height8), size=(590, -1))
-        self.summary_input.SetValue(ic.summary.get(ic.default))
 
         self.__static_text(pos=(width1, height9), label='Description*')
         self.description_input = wx.TextCtrl(self.panel, -1, pos=(width2, height9), size=(590, 300), style=wx.TE_MULTILINE)
-        self.description_input.SetValue(ic.description.get(ic.default))
+
 
         self.__static_text(pos=(width1, height10), label='Log link*')
         self.log_link_input = wx.TextCtrl(self.panel, -1, pos=(width2, height10), size=(590, -1))
-        self.log_link_input.SetValue(ic.log_link.get(ic.default))
 
         self.__static_text(pos=(width1, height11), label='SR Number')
         self.sr_number_input = wx.TextCtrl(self.panel, -1, pos=(width2, height11), size=(240, -1))
+
         self.__static_text(pos=(width7, height11), label='External JIRA ID')
         self.external_jira_id_input = wx.TextCtrl(self.panel, -1, pos=(width8, height11), size=(240, -1))
 
         self.__static_text(pos=(width1, height12), label='Serial Number')
         self.serial_number_input = wx.TextCtrl(self.panel, -1, pos=(width2, height12), size=(240, -1))
+
         self.__static_text(pos=(width7, height12), label='MCN number')
         self.mcn_number_input = wx.TextCtrl(self.panel, -1, pos=(width8, height12), size=(240, -1))
+
         self.__static_text(pos=(width1, height13), label='MetaBuildLocation')
         self.meta_build_location_input = wx.TextCtrl(self.panel, -1, pos=(width2, height13), size=(590, -1))
 
@@ -182,7 +171,7 @@ class IssueDialog(wx.Dialog):
             return
         dict_issue = Issue.generate(self)
         jira = JIRA('qrd_automation', '1234Abcd')
-        print jira.post(data=dict_issue)
+        #print jira.post(data=dict_issue)
 
     def __check_required_item_is_correct(self):
         error_list = list()
@@ -218,6 +207,72 @@ class IssueDialog(wx.Dialog):
             return False
         return True
 
+    def __change_options(self, profile):
+        if exists(path=profile):
+            profile = libs.Utility.parse_profile(profile_path=profile)
+            self.__change_options_from_profile(profile)
+        else:
+            self.__change_options_from_class_default()
+
+    def __change_options_from_class_default(self):
+        self.project_choice.SetStringSelection(ic.project.get(ic.default))
+        self.issue_type_choice.SetStringSelection(ic.issue_type.get(ic.default))
+        self.crash_choice.SetStringSelection(ic.crash.get(ic.default))
+        self.repeatability_choice.SetStringSelection(ic.repeatability.get(ic.default))
+        self.severity_choice.SetStringSelection(ic.severity.get(ic.default))
+        self.component_input.SetValue(ic.components.get(ic.default))
+        self.product_name_choice.SetStringSelection(ic.product_name.get(ic.default))
+        self.test_group_choice.SetStringSelection(ic.test_group.get(ic.default))
+        self.test_phase_choice.SetStringSelection(ic.test_phase.get(ic.default))
+        self.area_choice.SetStringSelection(ic.area.get(ic.default))
+        self.la_functionality_choice.SetStringSelection(ic.la_functionality.get(ic.default))
+        self.mm_functionality_choice.SetStringSelection(ic.mm_functionality.get(ic.default))
+        self.ui_functionality_choice.SetStringSelection(ic.ui_functionality.get(ic.default))
+        self.cnss_functionality_choice.SetStringSelection(ic.cnss_functionality.get(ic.default))
+        self.bsp_functionality_choice.SetStringSelection(ic.bsp_functionality.get(ic.default))
+        self.assignee_input.SetValue(ic.assignee.get(ic.default))
+        self.customer_name_choice.SetStringSelection(ic.customer_name.get(ic.default))
+        # labels
+        # sprint
+        self.category_type_choice.SetStringSelection(ic.category_type.get(ic.default))
+        self.summary_input.SetValue(ic.summary.get(ic.default))
+        self.description_input.SetValue(ic.description.get(ic.default))
+        self.log_link_input.SetValue(ic.log_link.get(ic.default))
+        self.sr_number_input.SetValue(ic.sr_number.get(ic.default))
+        self.external_jira_id_input.SetValue(ic.external_jira_id.get(ic.default))
+        self.serial_number_input.SetValue(ic.serial_number.get(ic.default))
+        self.mcn_number_input.SetValue(ic.mcn_number.get(ic.default))
+        self.meta_build_location_input.SetValue(ic.meta_build_location.get(ic.default))
+
+    def __change_options_from_profile(self, profile):
+        self.project_choice.SetStringSelection(profile.get(ic.project.get(ic.name)))
+        self.issue_type_choice.SetStringSelection(profile.get(ic.issue_type.get(ic.name)))
+        self.crash_choice.SetStringSelection(profile.get(ic.crash.get(ic.name)))
+        self.repeatability_choice.SetStringSelection(profile.get(ic.repeatability.get(ic.name)))
+        self.severity_choice.SetStringSelection(profile.get(ic.severity.get(ic.name)))
+        self.component_input.SetValue(profile.get(ic.components.get(ic.name)))
+        self.product_name_choice.SetStringSelection(profile.get(ic.product_name.get(ic.name)))
+        self.test_group_choice.SetStringSelection(profile.get(ic.test_group.get(ic.name)))
+        self.test_phase_choice.SetStringSelection(profile.get(ic.test_phase.get(ic.name)))
+        self.area_choice.SetStringSelection(profile.get(ic.area.get(ic.name)))
+        self.la_functionality_choice.SetStringSelection(profile.get(ic.la_functionality.get(ic.name)))
+        self.mm_functionality_choice.SetStringSelection(profile.get(ic.mm_functionality.get(ic.name)))
+        self.ui_functionality_choice.SetStringSelection(profile.get(ic.ui_functionality.get(ic.name)))
+        self.cnss_functionality_choice.SetStringSelection(profile.get(ic.cnss_functionality.get(ic.name)))
+        self.bsp_functionality_choice.SetStringSelection(profile.get(ic.bsp_functionality.get(ic.name)))
+        self.assignee_input.SetValue(profile.get(ic.assignee.get(ic.name)))
+        self.customer_name_choice.SetStringSelection(profile.get(ic.customer_name.get(ic.name)))
+        # labels
+        # sprint
+        self.category_type_choice.SetStringSelection(profile.get(ic.category_type.get(ic.name)))
+        self.summary_input.SetValue(profile.get(ic.summary.get(ic.name)))
+        self.description_input.SetValue(profile.get(ic.description.get(ic.name)))
+        self.log_link_input.SetValue(profile.get(ic.log_link.get(ic.name)))
+        self.sr_number_input.SetValue(profile.get(ic.sr_number.get(ic.name)))
+        self.external_jira_id_input.SetValue(profile.get(ic.external_jira_id.get(ic.name)))
+        self.serial_number_input.SetValue(profile.get(ic.serial_number.get(ic.name)))
+        self.mcn_number_input.SetValue(profile.get(ic.mcn_number.get(ic.name)))
+        self.meta_build_location_input.SetValue(profile.get(ic.meta_build_location.get(ic.name)))
 
 class ComponentsDialog(wx.Dialog):
     def __init__(self, items, pos):
@@ -256,6 +311,9 @@ class LabelDialog(wx.Dialog):
         self.__set_check_item(items=items)
         wx.Button(panel, wx.ID_OK, label='Y', pos=(138, 190), size=(33,  33))
         wx.Button(panel, wx.ID_CANCEL, label='N', pos=(172, 190), size=(33, 33))
+
+
+
 
 if __name__ == '__main__':
     import time
