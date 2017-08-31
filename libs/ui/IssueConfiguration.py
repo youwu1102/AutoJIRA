@@ -3,7 +3,6 @@ default = 'default'
 id = 'id'
 name = 'name'
 
-
 project = {
     name: 'Project',
     choice: ['CHNAPSS'],
@@ -104,7 +103,7 @@ mm_functionality = {
 
 ui_functionality = {
     name: 'UI Functionality',
-    choice: ['APP_Framework', 'Camera', 'China_Carrier_APPs', 'Contacts', 'Not UI Issue'],
+    choice: ['', 'APP_Framework', 'Camera', 'China_Carrier_APPs', 'Contacts', 'Not UI Issue'],
     default: 'Not UI Issue',
     id: 'customfield_21727'
 }
@@ -169,29 +168,29 @@ log_link = {
 sr_number = {
     name: 'SR Number',
     default: 'sr_number',
-    id: ''
+    id: 'customfield_12727'
 }
 
 external_jira_id = {
     name: 'External JIRA ID',
     default: 'external_jira_id',
-    id: ''
+    id: 'customfield_21720'
 }
 
 serial_number = {
     name: 'Serial Number',
     default: 'serial_number',
-    id: ''
+    id: 'customfield_14929'
 }
 
 mcn_number = {
     name: 'MCN number',
     default: 'mcn_number',
-    id: ''
+    id: 'customfield_14930'
 }
 
 meta_build_location = {
     name: 'Meta Build Location',
     default: 'meta_build_location',
-    id: ''
+    id: 'customfield_14016'
 }

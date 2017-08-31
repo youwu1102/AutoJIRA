@@ -64,11 +64,17 @@ class Client(wx.Frame):
         return tree_and_grid_box
 
     def __create_issue(self, event):
-        issue = IssueDialog()
+        import time
+        for x in range(1000):
+            print 'start:  %s' % time.time()
+            issue = IssueDialog()
+            print 'end  :  %s' % time.time()
+            issue.Destroy()
+            time.sleep(0.5)
         result = issue.ShowModal()
         if result == wx.ID_CANCEL:
             issue.Destroy()
-        print 'hello world'
+
 
 
 if __name__ == '__main__':

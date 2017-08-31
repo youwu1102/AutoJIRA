@@ -3,15 +3,16 @@ import IssueConfiguration as ic
 import Issue
 from libs.JIRA import JIRA
 from os.path import exists
-import libs.Utility
+from libs import Utility
+from libs import GlobalVariable
 
 class IssueDialog(wx.Dialog):
     def __init__(self):
         wx.Dialog.__init__(self, None, -1, title="Create Issue", size=(745, 775))
         self.Center()
-        default_profile = 'Default.xml'
+        self.default_profile = GlobalVariable.issue_default_profile
         self.__init_ui()
-        self.__change_options(default_profile)
+        self.__change_options(self.default_profile)
 
     def __static_text(self, pos, label):
         x, y = pos
@@ -151,10 +152,13 @@ class IssueDialog(wx.Dialog):
 
         create_button = wx.Button(self.panel, -1, label='Create', pos=(550, height14), size=(80, 30))
         cancel_button = wx.Button(self.panel, wx.ID_CANCEL, label='Cancel', pos=(635, height14), size=(80, 30))
-        import_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\import.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 18, height14 + 8), size=(34, 34))
-        export_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\export.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 52, height14 + 8), size=(34, 34))
-        save_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap("C:\Users\c_youwu\PycharmProjects\AutoJIRA\\resource\icon\export.png", wx.BITMAP_TYPE_PNG), pos=(width1 + 86, height14 + 8), size=(34, 34))
+        import_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap(GlobalVariable.icon_import, wx.BITMAP_TYPE_PNG), pos=(width1 + 18, height14 + 8), size=(34, 34))
+        export_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap(GlobalVariable.icon_export, wx.BITMAP_TYPE_PNG), pos=(width1 + 52, height14 + 8), size=(34, 34))
+        save_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap(GlobalVariable.icon_save, wx.BITMAP_TYPE_PNG), pos=(width1 + 86, height14 + 8), size=(34, 34))
         self.Bind(wx.EVT_BUTTON, self.on_create, create_button)
+        self.Bind(wx.EVT_BUTTON, self.on_save, save_button)
+        self.Bind(wx.EVT_BUTTON, self.on_export, export_button)
+        self.Bind(wx.EVT_BUTTON, self.on_import, import_button)
 
     def on_components(self, event):
         components = ComponentsDialog(self.component_input.GetValue(), self.Position)
@@ -163,8 +167,40 @@ class IssueDialog(wx.Dialog):
             self.component_input.SetValue(components.get_checked_item())
         components.Destroy()
 
+    def on_import(self, event):
+        dlg = wx.FileDialog(self,
+                            message="Select Template",
+                            wildcard="Issue Template (*.xml)|*.xml|All files (*.*)|*.*",
+                            style=wx.OPEN
+                            )
+        if dlg.ShowModal() == wx.ID_OK:
+            profile_path = dlg.GetPaths()[0]
+            profile = Utility.parse_profile(profile_path=profile_path)
+            self.__change_options_from_profile(profile)
+        dlg.Destroy()
+
+    def on_export(self, event):
+        dlg = wx.FileDialog(self,
+                            message="Save As Template",
+                            wildcard="Issue Template (*.xml)|*.xml|All files (*.*)|*.*",
+                            style=wx.SAVE
+                            )
+        if dlg.ShowModal() == wx.ID_OK:
+            profile_path = dlg.GetPaths()[0]
+            profile = self.__output_options_value()
+            Utility.save_profile(profile_path=profile_path, profile=profile)
+        dlg.Destroy()
+
+
+    def on_save(self, event):
+        profile = self.__output_options_value()
+        Utility.save_profile(profile_path='Default.xml', profile=profile)
+
+
     def on_assignee(self, event):
         print 'Not Ready'
+
+
 
     def on_create(self, event):
         if not self.__check_required_item_is_correct():
@@ -209,7 +245,7 @@ class IssueDialog(wx.Dialog):
 
     def __change_options(self, profile):
         if exists(path=profile):
-            profile = libs.Utility.parse_profile(profile_path=profile)
+            profile = Utility.parse_profile(profile_path=profile)
             self.__change_options_from_profile(profile)
         else:
             self.__change_options_from_class_default()
@@ -245,34 +281,67 @@ class IssueDialog(wx.Dialog):
         self.meta_build_location_input.SetValue(ic.meta_build_location.get(ic.default))
 
     def __change_options_from_profile(self, profile):
-        self.project_choice.SetStringSelection(profile.get(ic.project.get(ic.name)))
-        self.issue_type_choice.SetStringSelection(profile.get(ic.issue_type.get(ic.name)))
-        self.crash_choice.SetStringSelection(profile.get(ic.crash.get(ic.name)))
-        self.repeatability_choice.SetStringSelection(profile.get(ic.repeatability.get(ic.name)))
-        self.severity_choice.SetStringSelection(profile.get(ic.severity.get(ic.name)))
-        self.component_input.SetValue(profile.get(ic.components.get(ic.name)))
-        self.product_name_choice.SetStringSelection(profile.get(ic.product_name.get(ic.name)))
-        self.test_group_choice.SetStringSelection(profile.get(ic.test_group.get(ic.name)))
-        self.test_phase_choice.SetStringSelection(profile.get(ic.test_phase.get(ic.name)))
-        self.area_choice.SetStringSelection(profile.get(ic.area.get(ic.name)))
-        self.la_functionality_choice.SetStringSelection(profile.get(ic.la_functionality.get(ic.name)))
-        self.mm_functionality_choice.SetStringSelection(profile.get(ic.mm_functionality.get(ic.name)))
-        self.ui_functionality_choice.SetStringSelection(profile.get(ic.ui_functionality.get(ic.name)))
-        self.cnss_functionality_choice.SetStringSelection(profile.get(ic.cnss_functionality.get(ic.name)))
-        self.bsp_functionality_choice.SetStringSelection(profile.get(ic.bsp_functionality.get(ic.name)))
-        self.assignee_input.SetValue(profile.get(ic.assignee.get(ic.name)))
-        self.customer_name_choice.SetStringSelection(profile.get(ic.customer_name.get(ic.name)))
+        self.project_choice.SetStringSelection(profile.get(ic.project.get(ic.name), ic.project.get(ic.default)))
+        self.issue_type_choice.SetStringSelection(profile.get(ic.issue_type.get(ic.name), ic.issue_type.get(ic.default)))
+        self.crash_choice.SetStringSelection(profile.get(ic.crash.get(ic.name), ''))
+        self.repeatability_choice.SetStringSelection(profile.get(ic.repeatability.get(ic.name), ''))
+        self.severity_choice.SetStringSelection(profile.get(ic.severity.get(ic.name), ''))
+        self.component_input.SetValue(profile.get(ic.components.get(ic.name), ''))
+        self.product_name_choice.SetStringSelection(profile.get(ic.product_name.get(ic.name), ''))
+        self.test_group_choice.SetStringSelection(profile.get(ic.test_group.get(ic.name), ''))
+        self.test_phase_choice.SetStringSelection(profile.get(ic.test_phase.get(ic.name), ''))
+        self.area_choice.SetStringSelection(profile.get(ic.area.get(ic.name), ''))
+        self.la_functionality_choice.SetStringSelection(profile.get(ic.la_functionality.get(ic.name), ''))
+        self.mm_functionality_choice.SetStringSelection(profile.get(ic.mm_functionality.get(ic.name), ''))
+        self.ui_functionality_choice.SetStringSelection(profile.get(ic.ui_functionality.get(ic.name), ''))
+        self.cnss_functionality_choice.SetStringSelection(profile.get(ic.cnss_functionality.get(ic.name), ''))
+        self.bsp_functionality_choice.SetStringSelection(profile.get(ic.bsp_functionality.get(ic.name), ''))
+        self.assignee_input.SetValue(profile.get(ic.assignee.get(ic.name), ''))
+        self.customer_name_choice.SetStringSelection(profile.get(ic.customer_name.get(ic.name), ''))
         # labels
         # sprint
-        self.category_type_choice.SetStringSelection(profile.get(ic.category_type.get(ic.name)))
-        self.summary_input.SetValue(profile.get(ic.summary.get(ic.name)))
-        self.description_input.SetValue(profile.get(ic.description.get(ic.name)))
-        self.log_link_input.SetValue(profile.get(ic.log_link.get(ic.name)))
-        self.sr_number_input.SetValue(profile.get(ic.sr_number.get(ic.name)))
-        self.external_jira_id_input.SetValue(profile.get(ic.external_jira_id.get(ic.name)))
-        self.serial_number_input.SetValue(profile.get(ic.serial_number.get(ic.name)))
-        self.mcn_number_input.SetValue(profile.get(ic.mcn_number.get(ic.name)))
-        self.meta_build_location_input.SetValue(profile.get(ic.meta_build_location.get(ic.name)))
+        self.category_type_choice.SetStringSelection(profile.get(ic.category_type.get(ic.name), ''))
+        self.summary_input.SetValue(profile.get(ic.summary.get(ic.name), ''))
+        self.description_input.SetValue(profile.get(ic.description.get(ic.name), ''))
+        self.log_link_input.SetValue(profile.get(ic.log_link.get(ic.name), ''))
+        self.sr_number_input.SetValue(profile.get(ic.sr_number.get(ic.name), ''))
+        self.external_jira_id_input.SetValue(profile.get(ic.external_jira_id.get(ic.name), ''))
+        self.serial_number_input.SetValue(profile.get(ic.serial_number.get(ic.name), ''))
+        self.mcn_number_input.SetValue(profile.get(ic.mcn_number.get(ic.name), ''))
+        self.meta_build_location_input.SetValue(profile.get(ic.meta_build_location.get(ic.name), ''))
+
+    def __output_options_value(self):
+        profile = dict()
+        profile[ic.project.get(ic.name)] = self.project_choice.GetStringSelection()
+        profile[ic.issue_type.get(ic.name)] = self.issue_type_choice.GetStringSelection()
+        profile[ic.crash.get(ic.name)] = self.crash_choice.GetStringSelection()
+        profile[ic.repeatability.get(ic.name)] = self.repeatability_choice.GetStringSelection()
+        profile[ic.severity.get(ic.name)] = self.severity_choice.GetStringSelection()
+        profile[ic.components.get(ic.name)] = self.component_input.GetValue()
+        profile[ic.product_name.get(ic.name)] = self.product_name_choice.GetStringSelection()
+        profile[ic.test_group.get(ic.name)] = self.test_group_choice.GetStringSelection()
+        profile[ic.test_phase.get(ic.name)] = self.test_phase_choice.GetStringSelection()
+        profile[ic.area.get(ic.name)] = self.area_choice.GetStringSelection()
+        profile[ic.la_functionality.get(ic.name)] = self.la_functionality_choice.GetStringSelection()
+        profile[ic.mm_functionality.get(ic.name)] = self.mm_functionality_choice.GetStringSelection()
+        profile[ic.ui_functionality.get(ic.name)] = self.ui_functionality_choice.GetStringSelection()
+        profile[ic.cnss_functionality.get(ic.name)] = self.cnss_functionality_choice.GetStringSelection()
+        profile[ic.bsp_functionality.get(ic.name)] = self.bsp_functionality_choice.GetStringSelection()
+        profile[ic.assignee.get(ic.name)] = self.assignee_input.GetValue()
+        profile[ic.customer_name.get(ic.name)] = self.customer_name_choice.GetStringSelection()
+        # labels
+        # sprint
+        profile[ic.category_type.get(ic.name)] = self.category_type_choice.GetStringSelection()
+        profile[ic.summary.get(ic.name)] = self.summary_input.GetValue()
+        profile[ic.description.get(ic.name)] = self.description_input.GetValue()
+        profile[ic.log_link.get(ic.name)] = self.log_link_input.GetValue()
+        profile[ic.sr_number.get(ic.name)] = self.sr_number_input.GetValue()
+        profile[ic.external_jira_id.get(ic.name)] = self.external_jira_id_input.GetValue()
+        profile[ic.serial_number.get(ic.name)] = self.serial_number_input.GetValue()
+        profile[ic.mcn_number.get(ic.name)] = self.mcn_number_input.GetValue()
+        profile[ic.meta_build_location.get(ic.name)] = self.meta_build_location_input.GetValue()
+        return profile
+
 
 class ComponentsDialog(wx.Dialog):
     def __init__(self, items, pos):
@@ -313,15 +382,12 @@ class LabelDialog(wx.Dialog):
         wx.Button(panel, wx.ID_CANCEL, label='N', pos=(172, 190), size=(33, 33))
 
 
-
-
 if __name__ == '__main__':
     import time
-    print time.time()
     app = wx.App()
     print time.time()
     login = IssueDialog()
-    print time.time()
+
     login.Show()
-    print time.time()
+
     app.MainLoop()
