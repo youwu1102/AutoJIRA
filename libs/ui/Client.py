@@ -1,6 +1,6 @@
 # -*- encoding:UTF-8 -*-
 from libs.ui.LoginDialog import LoginDialog
-from libs.ui.IssueDialog import IssueDialog
+from libs.ui.zCreateIssueDialog import CreateIssueDialog
 import wx
 import wx.grid
 import wx.lib.agw.customtreectrl as CT
@@ -22,7 +22,7 @@ class Client(wx.Frame):
         main_box.Add(toolbar_box, 1, wx.EXPAND)
         main_box.Add(tree_and_grid_box, 7, wx.EXPAND)
         self.panel.SetSizer(main_box)
-        self.__open_login()
+        #self.__open_login()
 
     def __open_login(self):
         login = LoginDialog()
@@ -35,8 +35,11 @@ class Client(wx.Frame):
     def __init_tool_box(self):
         toolbar_box = wx.BoxSizer(wx.HORIZONTAL)  # 工具栏
         create_issue_button = wx.Button(self.panel, -1, 'Create Issue', size=(-1, -1))
+        batch_submission_button = wx.Button(self.panel, -1, 'Batch Sub', size=(-1, -1))
         self.Bind(wx.EVT_BUTTON, self.__create_issue, create_issue_button)
+        self.Bind(wx.EVT_BUTTON, self.__batch_submission, batch_submission_button)
         toolbar_box.Add(create_issue_button)
+        toolbar_box.Add(batch_submission_button)
         return toolbar_box
 
     def __init_grid_and_tree_box(self):
@@ -61,9 +64,23 @@ class Client(wx.Frame):
         return tree_and_grid_box
 
     def __create_issue(self, event):
-        issue = IssueDialog()
+        issue = CreateIssueDialog()
         issue.ShowModal()
-        issue.Destroy()
+
+    def __batch_submission(self, event):
+        dlg = wx.FileDialog(self,
+                            message="Select Template",
+                            wildcard="Issue Template (*.xml)|*.xml|All files (*.*)|*.*",
+                            defaultDir='C:\Git\AppStress\\repository\cases\ChinaAppStress\\3rd_party_random\com.baidu.appsearch',
+                            style=wx.OPEN|wx.FD_MULTIPLE
+                            )
+        if dlg.ShowModal() == wx.ID_OK:
+            profile_path = dlg.GetPaths()
+            for a in profile_path:
+                print a
+            # profile = Utility.parse_profile(profile_path=profile_path)
+            # self.__change_options_from_profile(profile)
+        dlg.Destroy()
 
 
 

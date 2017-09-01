@@ -91,6 +91,12 @@ class JIRA(object):
         print self.post(self.data)
 
     def post(self, data):
+        import time
+        time.sleep(2)
+        return 0, {"id":"7044855","key":"CHNAPSS-51750","self":"https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue/7044855"}
+
+
+
         url='https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue'
         # with open ('C:\Users\c_youwu\Desktop\jira\JiraTemplate.txt') as r:
         #     self.data= r.read()

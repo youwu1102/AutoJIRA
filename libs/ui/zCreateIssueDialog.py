@@ -5,8 +5,11 @@ from libs.JIRA import JIRA
 from os.path import exists
 from libs import Utility
 from libs import GlobalVariable
+import webbrowser
 
-class IssueDialog(wx.Dialog):
+
+
+class CreateIssueDialog(wx.Dialog):
     def __init__(self):
         wx.Dialog.__init__(self, None, -1, title="Create Issue", size=(745, 775))
         self.Center()
@@ -145,12 +148,12 @@ class IssueDialog(wx.Dialog):
         self.__static_text(pos=(width1, height13), label='MetaBuildLocation')
         self.meta_build_location_input = wx.TextCtrl(self.panel, -1, pos=(width2, height13), size=(590, -1))
 
-        create_button = wx.Button(self.panel, -1, label='Create', pos=(550, height14), size=(80, 30))
+        self.create_button = wx.Button(self.panel, -1, label='Create', pos=(550, height14), size=(80, 30))
         cancel_button = wx.Button(self.panel, wx.ID_CANCEL, label='Cancel', pos=(635, height14), size=(80, 30))
         import_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap(GlobalVariable.icon_import, wx.BITMAP_TYPE_PNG), pos=(width1 + 18, height14 + 8), size=(34, 34))
         export_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap(GlobalVariable.icon_export, wx.BITMAP_TYPE_PNG), pos=(width1 + 52, height14 + 8), size=(34, 34))
         save_button = wx.BitmapButton(self.panel, id=wx.ID_ANY, bitmap=wx.Bitmap(GlobalVariable.icon_save, wx.BITMAP_TYPE_PNG), pos=(width1 + 86, height14 + 8), size=(34, 34))
-        self.Bind(wx.EVT_BUTTON, self.on_create, create_button)
+        self.Bind(wx.EVT_BUTTON, self.on_create, self.create_button)
         self.Bind(wx.EVT_BUTTON, self.on_save, save_button)
         self.Bind(wx.EVT_BUTTON, self.on_export, export_button)
         self.Bind(wx.EVT_BUTTON, self.on_import, import_button)
@@ -205,9 +208,20 @@ class IssueDialog(wx.Dialog):
     def on_create(self, event):
         if not self.__check_required_item_is_correct():
             return
+        self.create_button.Disable()
         dict_issue = Issue.generate(self)
         jira = JIRA('qrd_automation', '1234Abcd')
-        print jira.post(data=dict_issue)
+        state, data = jira.post(data=dict_issue)
+        if state == 0:
+            self.__show_result(data.get('key'))
+            self.Destroy()
+        else:
+            print 'Failllllllllllllllllllllllll'
+
+    def __show_result(self, jira_id):
+        dialog = Jira_Id_Dialog(jira_id)
+        dialog.ShowModal()
+        dialog.Destroy()
 
     def __check_required_item_is_correct(self):
         flag = True
@@ -388,8 +402,8 @@ class ComponentsDialog(wx.Dialog):
         self.SetPosition((x+720, y+70))
         self.components = wx.CheckListBox(panel, -1, choices=ic.components.get(ic.choice), size=(207, 190))
         self.__set_check_item(items=items)
-        wx.Button(panel, wx.ID_OK, label='Y', pos=(138, 190), size=(33,  33))
-        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(172, 190), size=(33, 33))
+        wx.Button(panel, wx.ID_OK, label='Y', pos=(0, 190), size=(33,  33))
+        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(34, 190), size=(33, 33))
 
     def get_checked_item(self):
         checked_tuple = self.components.GetCheckedStrings()
@@ -409,7 +423,7 @@ class ComponentsDialog(wx.Dialog):
 
 class LabelsDialog(wx.Dialog):
     def __init__(self, items, pos):
-        wx.Dialog.__init__(self, None, -1, title="Labels", size=(308, 320))
+        wx.Dialog.__init__(self, None, -1, title="Labels", size=(308, 310))
         panel = wx.Panel(self)
         x, y = pos
         self.SetPosition((x+720, y+160))
@@ -422,8 +436,8 @@ class LabelsDialog(wx.Dialog):
         self.Bind(wx.EVT_LISTBOX_DCLICK, self.__double_click_on_suggested_label_list, self.suggested_label_list)
         self.Bind(wx.EVT_LISTBOX_DCLICK, self.__double_click_on_selected_label_list, self.selected_label_list)
         self.Bind(wx.EVT_BUTTON, self.__on_add, add_button)
-        wx.Button(panel, wx.ID_OK, label='Y', pos=(220, 250), size=(33,  33))
-        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(254, 250), size=(33, 33))
+        wx.Button(panel, wx.ID_OK, label='Y', pos=(0, 245), size=(33,  33))
+        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(34, 245), size=(33, 33))
         self.__set_selected_labels(items=items)
 
     def __set_selected_labels(self, items):
@@ -463,10 +477,28 @@ class LabelsDialog(wx.Dialog):
         items = self.selected_label_list.Items
         return '|'.join(items)
 
+
+class Jira_Id_Dialog(wx.Dialog):
+    def __init__(self, jira_id):
+        wx.Dialog.__init__(self, None, -1, title='Success', size=(305, 220))
+        self.jira_id = jira_id
+        self.Center()
+        panel = wx.Panel(self)
+        wx.TextCtrl(panel, -1, pos=(10, 20), value=jira_id, size=(280, 70), style=wx.TE_READONLY|wx.TE_CENTER).SetFont(wx.Font(28, wx.MODERN, wx.NORMAL, wx.BOLD))
+        wx.TextCtrl(panel, -1, pos=(10, 100), size=(280, -1), value='https://jira-cstm.qualcomm.com/jira/browse/%s' % jira_id, style=wx.TE_READONLY)
+        open_button = wx.Button(panel, -1, label='Open in the browser', pos=(10, 130), size=(280,  -1))
+        wx.Button(panel, wx.ID_OK, label='Close', pos=(10, 160), size=(280, -1))
+        self.Bind(wx.EVT_BUTTON, self.on_open, open_button)
+
+    def on_open(self, event):
+        webbrowser.open(url='https://jira-cstm.qualcomm.com/jira/browse/%s' % self.jira_id, new=0, autoraise=True)
+
 if __name__ == '__main__':
     import time
     app = wx.App()
     print time.time()
-    login = IssueDialog()
-    login.Show()
+    dialog = CreateIssueDialog()
+    dialog.ShowModal()
+    dialog.Destroy()
+    print time.time()
     app.MainLoop()

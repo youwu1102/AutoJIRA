@@ -1,4 +1,5 @@
 import IssueConfiguration as ic
+from libs.GlobalVariable import account
 
 def generate(issue_dialog):
     issue = dict()
@@ -176,9 +177,18 @@ def __log_link(issue_dialog):
     return issue_dialog.log_link_input.GetValue()[:255]
 
 def __assignee(issue_dialog):
-    assignee = dict()
-    account = 'c_youwu'
-    assignee['name'] = account
-    assignee['emailAddress'] = '%s@qti.qualcomm.com' % account
-    return assignee
+    assignee_value = issue_dialog.assignee_input.GetValue()
+    if assignee_value == 'Assign to me':
+        assignee = dict()
+        assignee['name'] = account
+        assignee['emailAddress'] = '%s@qti.qualcomm.com' % account
+        return assignee
+    else:
+        assignee = dict()
+        assignee['name'] = assignee_value
+        assignee['emailAddress'] = '%s@qti.qualcomm.com' % assignee_value
+        return assignee
+
+
+
 
