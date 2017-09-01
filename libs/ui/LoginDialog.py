@@ -1,12 +1,8 @@
 # -*- encoding:UTF-8 -*-
 import wx
-import threading
 import urllib2
 from base64 import encodestring
-"""
-Author：You Wu
-
-"""
+from libs import GlobalVariable
 
 
 class LoginDialog(wx.Dialog):
@@ -44,7 +40,10 @@ class LoginDialog(wx.Dialog):
         if not account or not password:
             self.refresh_info_text(text='Please input account or password', type='E')
         else:
+            GlobalVariable.account = account
             self.authorization(account, password)
+
+
 
 
     def authorization(self, account, password):

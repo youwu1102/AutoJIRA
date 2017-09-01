@@ -1,9 +1,10 @@
 import IssueConfiguration as ic
-from libs.GlobalVariable import account
+from libs import GlobalVariable
 
 def generate(issue_dialog):
     issue = dict()
     issue['fields'] = __fields(issue_dialog)
+    print issue
     return issue
 
 
@@ -40,16 +41,23 @@ def __fields(issue_dialog):
     return fields
 
 
+def __value_mapping_choice_selection(choice):
+    _dict = dict()
+    value = choice.GetStringSelection()
+    if value:
+        _dict['value'] = value
+        return _dict
+    else:
+        return None
+
+
+
 def __customer_name(issue_dialog):
-    customer_name = dict()
-    customer_name['value'] = issue_dialog.customer_name_choice.GetStringSelection()
-    return customer_name
+    return __value_mapping_choice_selection(issue_dialog.customer_name_choice)
 
 
 def __category_type(issue_dialog):
-    category_type = dict()
-    category_type['value'] = issue_dialog.category_type_choice.GetStringSelection()
-    return category_type
+    return __value_mapping_choice_selection(issue_dialog.category_type_choice)
 
 
 def __sr_number(issue_dialog):
@@ -75,6 +83,7 @@ def __meta_build_location(issue_dialog):
 def __labels(issue_dialog):
     string = issue_dialog.labels_input.GetValue()
     labels = string.split('|')
+    labels = list(set(labels))
     return labels
 
 
@@ -86,41 +95,29 @@ def __components(issue_dialog):
         component_list.append({'name': component})
     return component_list
 
+
 def __area(issue_dialog):
-    area = dict()
-    area['value'] = issue_dialog.area_choice.GetStringSelection()
-    return area
+    return __value_mapping_choice_selection(issue_dialog.area_choice)
 
 
 def __cnss_functionality(issue_dialog):
-    cnss_functionality = dict()
-    cnss_functionality['value'] = issue_dialog.cnss_functionality_choice.GetStringSelection()
-    return cnss_functionality
+    return __value_mapping_choice_selection(issue_dialog.cnss_functionality_choice)
 
 
 def __mm_functionality(issue_dialog):
-    mm_functionality = dict()
-    mm_functionality['value'] = issue_dialog.mm_functionality_choice.GetStringSelection()
-    return mm_functionality
+    return __value_mapping_choice_selection(issue_dialog.mm_functionality_choice)
 
 
 def __bsp_functionality(issue_dialog):
-    bsp_functionality = dict()
-    bsp_functionality['value'] = issue_dialog.bsp_functionality_choice.GetStringSelection()
-    return bsp_functionality
+    return __value_mapping_choice_selection(issue_dialog.bsp_functionality_choice)
 
 
 def __ui_functionality(issue_dialog):
-    ui_functionality = dict()
-    ui_functionality['value'] = issue_dialog.ui_functionality_choice.GetStringSelection()
-    return ui_functionality
+    return __value_mapping_choice_selection(issue_dialog.ui_functionality_choice)
 
 
 def __la_functionality(issue_dialog):
-    la_functionality = dict()
-    la_functionality['value'] = issue_dialog.la_functionality_choice.GetStringSelection()
-    return la_functionality
-
+    return __value_mapping_choice_selection(issue_dialog.la_functionality_choice)
 
 def __repeatability(issue_dialog):
     repeatability = dict()
@@ -176,12 +173,13 @@ def __product_name(issue_dialog):
 def __log_link(issue_dialog):
     return issue_dialog.log_link_input.GetValue()[:255]
 
+
 def __assignee(issue_dialog):
     assignee_value = issue_dialog.assignee_input.GetValue()
     if assignee_value == 'Assign to me':
         assignee = dict()
-        assignee['name'] = account
-        assignee['emailAddress'] = '%s@qti.qualcomm.com' % account
+        assignee['name'] = GlobalVariable.account
+        assignee['emailAddress'] = '%s@qti.qualcomm.com' % GlobalVariable.account
         return assignee
     else:
         assignee = dict()

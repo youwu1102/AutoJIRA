@@ -1,7 +1,7 @@
 from os.path import join
 
-account = 'c_youwu'
-password = 'Lct`12`12'
+account = ''
+password = ''
 
 work_dir = 'C:\Users\c_youwu\PycharmProjects\AutoJIRA'
 resource_folder = join(work_dir, 'resource')

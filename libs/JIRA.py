@@ -82,7 +82,7 @@ class JIRA(object):
         self.__cookie = cookielib.LWPCookieJar()
         self.__opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(self.__cookie))
         urllib2.install_opener(self.__opener)
-        req = urllib2.Request('https://jira-cstm.qualcomm.com/jira/rest/api/2/search?jql=project+in+(CHNAPSS)+and+reporter=c_youwu&maxResults=1&startAt=0')
+        req = urllib2.Request('https://jira-cstm.qualcomm.com/jira/rest/api/2/search?jql=project+in+(CHNAPSS)+and+reporter=qrd_automation&maxResults=1&startAt=0')
         req.add_header('Authorization', 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1])
         response = urllib2.urlopen(req)
         print response.read()
@@ -91,25 +91,23 @@ class JIRA(object):
         print self.post(self.data)
 
     def post(self, data):
-        import time
-        time.sleep(2)
-        return 0, {"id":"7044855","key":"CHNAPSS-51750","self":"https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue/7044855"}
-
+        # import time
+        # time.sleep(2)
+        # return 0, {"id":"7044855","key":"CHNAPSS-51750","self":"https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue/7044855"}
+        #
 
 
         url='https://jira-cstm-tools.qualcomm.com/jira/rest/api/2/issue'
         # with open ('C:\Users\c_youwu\Desktop\jira\JiraTemplate.txt') as r:
         #     self.data= r.read()
-        print self.data
-        print data
         headers = {
             'Content-Type': 'application/json',
             'Authorization': 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1],
-            'Accept':'*/*'
+            'Accept': '*/*'
         }
         request = urllib2.Request(url=url, headers=headers, data=json.dumps(data))
         response = urllib2.urlopen(request)
-        return response.read()
+        return 0, eval(response.read())
 
     def authorization(self):
         # self.__cookie = cookielib.LWPCookieJar()

@@ -22,7 +22,7 @@ class Client(wx.Frame):
         main_box.Add(toolbar_box, 1, wx.EXPAND)
         main_box.Add(tree_and_grid_box, 7, wx.EXPAND)
         self.panel.SetSizer(main_box)
-        #self.__open_login()
+        self.__open_login()
 
     def __open_login(self):
         login = LoginDialog()
