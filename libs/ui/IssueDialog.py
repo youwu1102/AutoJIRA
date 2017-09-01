@@ -76,18 +76,14 @@ class IssueDialog(wx.Dialog):
         self.__static_text(pos=(width3, height3), label='Test Group*')
         self.test_group_choice = wx.Choice(self.panel, -1, pos=(width4, height3), choices=ic.test_group.get(ic.choice), size=(120, -1))
 
-
         self.__static_text(pos=(width5, height3), label='Test Phase*')
         self.test_phase_choice = wx.Choice(self.panel, -1, pos=(width6, height3), choices=ic.test_phase.get(ic.choice), size=(120, -1))
-
 
         self.__static_text(pos=(width1, height4), label='Area')
         self.area_choice = wx.Choice(self.panel, -1, pos=(width2, height4), choices=ic.area.get(ic.choice), size=(120, -1))
 
-
         self.__static_text(pos=(width3, height4), label='LA Functionality')
         self.la_functionality_choice = wx.Choice(self.panel, -1, pos=(width4, height4), choices=ic.la_functionality.get(ic.choice), size=(120, -1), style=wx.LB_HSCROLL)
-
 
         self.__static_text(pos=(width5, height4), label='MM Functionality')
         self.mm_functionality_choice = wx.Choice(self.panel, -1, pos=(width6, height4), choices=ic.mm_functionality.get(ic.choice), size=(120, -1))
@@ -95,10 +91,8 @@ class IssueDialog(wx.Dialog):
         self.__static_text(pos=(width1, height5), label='UI Functionality')
         self.ui_functionality_choice = wx.Choice(self.panel, -1, pos=(width2, height5), choices=ic.ui_functionality.get(ic.choice), size=(120, -1))
 
-
         self.__static_text(pos=(width3, height5), label='CNSS Functionality')
         self.cnss_functionality_choice = wx.Choice(self.panel, -1, pos=(width4, height5), choices=ic.cnss_functionality.get(ic.choice), size=(120, -1))
-
 
         self.__static_text(pos=(width5, height5), label='BSP Functionality')
         self.bsp_functionality_choice = wx.Choice(self.panel, -1, pos=(width6, height5), choices=ic.bsp_functionality.get(ic.choice), size=(120, -1))
@@ -115,8 +109,9 @@ class IssueDialog(wx.Dialog):
         self.customer_name_choice = wx.Choice(self.panel, -1, pos=(width4, height6), choices=ic.customer_name.get(ic.choice), size=(120, -1))
 
         self.__static_text(pos=(width5, height6), label='Labels')
-        self.labels_choice = wx.Choice(self.panel, -1, pos=(width6, height6), choices=['3'], size=(120, -1))
-        self.labels_choice.Disable()
+        self.labels_input = wx.TextCtrl(self.panel, -1, pos=(width6, height6), size=(100, 24), style=wx.TE_READONLY)
+        labels__button = wx.Button(self.panel, -1, label='...', pos=(width6+100, height6-1), size=(20, 26))
+        self.Bind(wx.EVT_BUTTON, self.on_labels, labels__button)
 
         self.__static_text(pos=(width1, height7), label='Sprint')
         self.sprint_choice = wx.Choice(self.panel, -1, pos=(width2, height7), choices=['1'], size=(120, -1))
@@ -167,10 +162,18 @@ class IssueDialog(wx.Dialog):
             self.component_input.SetValue(components.get_checked_item())
         components.Destroy()
 
+    def on_labels(self, event):
+        labels = LabelsDialog(self.labels_input.GetValue(), self.Position)
+        result = labels.ShowModal()
+        if result == wx.ID_OK:
+            self.labels_input.SetValue(labels.get_selected_item())
+        labels.Destroy()
+
     def on_import(self, event):
         dlg = wx.FileDialog(self,
                             message="Select Template",
                             wildcard="Issue Template (*.xml)|*.xml|All files (*.*)|*.*",
+                            defaultDir=GlobalVariable.template_folder,
                             style=wx.OPEN
                             )
         if dlg.ShowModal() == wx.ID_OK:
@@ -183,6 +186,7 @@ class IssueDialog(wx.Dialog):
         dlg = wx.FileDialog(self,
                             message="Save As Template",
                             wildcard="Issue Template (*.xml)|*.xml|All files (*.*)|*.*",
+                            defaultDir=GlobalVariable.template_folder,
                             style=wx.SAVE
                             )
         if dlg.ShowModal() == wx.ID_OK:
@@ -191,57 +195,90 @@ class IssueDialog(wx.Dialog):
             Utility.save_profile(profile_path=profile_path, profile=profile)
         dlg.Destroy()
 
-
     def on_save(self, event):
         profile = self.__output_options_value()
-        Utility.save_profile(profile_path='Default.xml', profile=profile)
-
+        Utility.save_profile(profile_path=self.default_profile, profile=profile)
 
     def on_assignee(self, event):
         print 'Not Ready'
-
-
 
     def on_create(self, event):
         if not self.__check_required_item_is_correct():
             return
         dict_issue = Issue.generate(self)
         jira = JIRA('qrd_automation', '1234Abcd')
-        #print jira.post(data=dict_issue)
+        print jira.post(data=dict_issue)
 
     def __check_required_item_is_correct(self):
-        error_list = list()
+        flag = True
+        required_but_empty_list = list()
+        length_exceeds_limit_list = list()
+        
         if not self.project_choice.GetStringSelection():
-            error_list.append('Project')
+            required_but_empty_list.append('Project')
         if not self.issue_type_choice.GetStringSelection():
-            error_list.append('Issue Type')
+            required_but_empty_list.append('Issue Type')
         if not self.crash_choice.GetStringSelection():
-            error_list.append('Crash')
+            required_but_empty_list.append('Crash')
         if not self.repeatability_choice.GetStringSelection():
-            error_list.append('Repeatability')
+            required_but_empty_list.append('Repeatability')
         if not self.severity_choice.GetStringSelection():
-            error_list.append('Severity')
+            required_but_empty_list.append('Severity')
         if not self.component_input.GetValue():
-            error_list.append('Components')
+            required_but_empty_list.append('Components')
         if not self.product_name_choice.GetStringSelection():
-            error_list.append('Product Name')
+            required_but_empty_list.append('Product Name')
         if not self.test_group_choice.GetStringSelection():
-            error_list.append('Test Group')
+            required_but_empty_list.append('Test Group')
         if not self.test_phase_choice.GetStringSelection():
-            error_list.append('Test Phase')
-        if not self.summary_input.GetValue():
-            error_list.append('Summary')
-        if not self.description_input.GetValue():
-            error_list.append('Description')
-        if not self.log_link_input.GetValue():
-            error_list.append('Log Link')
-        if error_list:
-            msg = wx.MessageDialog(self.panel, message='Please complete with the information required!\n\n' + '\n'.join(error_list),
+            required_but_empty_list.append('Test Phase')
+
+        summary_value = self.summary_input.GetValue()
+        if not summary_value:
+            required_but_empty_list.append('Summary')
+        if len(summary_value) >= 255:
+            length_exceeds_limit_list.append('Summary')
+
+        description_value = self.description_input.GetValue()
+        if not description_value:
+            required_but_empty_list.append('Description')
+        if len(description_value) >= 32768:
+            length_exceeds_limit_list.append('Description')
+
+        log_link_value = self.log_link_input.GetValue()
+        if not log_link_value:
+            required_but_empty_list.append('Log Link')
+        if len(log_link_value) >= 255:
+            length_exceeds_limit_list.append('Log Link')
+
+        if len(self.sr_number_input.GetValue()) >= 255:
+            length_exceeds_limit_list.append('SR Number')
+
+        if len(self.meta_build_location_input.GetValue()) >= 255:
+            length_exceeds_limit_list.append('Meta Build Location')
+
+        if len(self.serial_number_input.GetValue()) >= 255:
+            length_exceeds_limit_list.append('Serial Number')
+
+        if len(self.mcn_number_input.GetValue()) >= 255:
+            length_exceeds_limit_list.append('MCN number')
+
+        if len(self.external_jira_id_input.GetValue()) >= 255:
+            length_exceeds_limit_list.append('External JIRA ID')
+
+        if required_but_empty_list:
+            msg = wx.MessageDialog(self.panel, message='Please complete with the information required!\n\n' + '\n'.join(required_but_empty_list),
                                    caption="Error", style=wx.OK, pos=wx.DefaultPosition)
             msg.ShowModal()
             msg.Destroy()
-            return False
-        return True
+            flag = False
+        if length_exceeds_limit_list:
+            msg = wx.MessageDialog(self.panel, message='The string length exceeds the limit!\n\n' + '\n'.join(length_exceeds_limit_list),
+                                   caption="Error", style=wx.OK, pos=wx.DefaultPosition)
+            msg.ShowModal()
+            msg.Destroy()
+            flag = False
+        return flag
 
     def __change_options(self, profile):
         if exists(path=profile):
@@ -268,7 +305,7 @@ class IssueDialog(wx.Dialog):
         self.bsp_functionality_choice.SetStringSelection(ic.bsp_functionality.get(ic.default))
         self.assignee_input.SetValue(ic.assignee.get(ic.default))
         self.customer_name_choice.SetStringSelection(ic.customer_name.get(ic.default))
-        # labels
+        self.labels_input.SetValue(ic.labels.get(ic.default))
         # sprint
         self.category_type_choice.SetStringSelection(ic.category_type.get(ic.default))
         self.summary_input.SetValue(ic.summary.get(ic.default))
@@ -298,7 +335,7 @@ class IssueDialog(wx.Dialog):
         self.bsp_functionality_choice.SetStringSelection(profile.get(ic.bsp_functionality.get(ic.name), ''))
         self.assignee_input.SetValue(profile.get(ic.assignee.get(ic.name), ''))
         self.customer_name_choice.SetStringSelection(profile.get(ic.customer_name.get(ic.name), ''))
-        # labels
+        self.labels_input.SetValue(profile.get(ic.labels.get(ic.name), ''))
         # sprint
         self.category_type_choice.SetStringSelection(profile.get(ic.category_type.get(ic.name), ''))
         self.summary_input.SetValue(profile.get(ic.summary.get(ic.name), ''))
@@ -329,7 +366,7 @@ class IssueDialog(wx.Dialog):
         profile[ic.bsp_functionality.get(ic.name)] = self.bsp_functionality_choice.GetStringSelection()
         profile[ic.assignee.get(ic.name)] = self.assignee_input.GetValue()
         profile[ic.customer_name.get(ic.name)] = self.customer_name_choice.GetStringSelection()
-        # labels
+        profile[ic.labels.get(ic.name)] = self.labels_input.GetValue()
         # sprint
         profile[ic.category_type.get(ic.name)] = self.category_type_choice.GetStringSelection()
         profile[ic.summary.get(ic.name)] = self.summary_input.GetValue()
@@ -370,24 +407,66 @@ class ComponentsDialog(wx.Dialog):
         self.components.SetChecked(check_list)
 
 
-class LabelDialog(wx.Dialog):
+class LabelsDialog(wx.Dialog):
     def __init__(self, items, pos):
-        wx.Dialog.__init__(self, None, -1, title="Label", size=(210, 253))
+        wx.Dialog.__init__(self, None, -1, title="Labels", size=(308, 320))
         panel = wx.Panel(self)
         x, y = pos
-        self.SetPosition((x+720, y+70))
-        self.components = wx.CheckListBox(panel, -1, choices=ic.components.get(ic.choice), size=(207, 190))
-        self.__set_check_item(items=items)
-        wx.Button(panel, wx.ID_OK, label='Y', pos=(138, 190), size=(33,  33))
-        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(172, 190), size=(33, 33))
+        self.SetPosition((x+720, y+160))
+        wx.StaticText(panel, -1, pos=(0, 0), label='Suggested Label', size=(150, -1), style=wx.ALIGN_CENTER)
+        wx.StaticText(panel, -1, pos=(151, 0), label='Selected Label', size=(150, -1), style=wx.ALIGN_CENTER)
+        self.suggested_label_list = wx.ListBox(panel, -1, pos=(0, 18), size=(150,200), choices=ic.labels.get(ic.choice))
+        self.selected_label_list = wx.ListBox(panel, -1, pos=(151, 18), size=(150,200), choices=[])
+        self.label_input = wx.TextCtrl(panel, -1, pos=(0, 219), size=(260, 24))
+        add_button = wx.Button(panel, -1, label='Add', pos=(261, 218), size=(41,  26))
+        self.Bind(wx.EVT_LISTBOX_DCLICK, self.__double_click_on_suggested_label_list, self.suggested_label_list)
+        self.Bind(wx.EVT_LISTBOX_DCLICK, self.__double_click_on_selected_label_list, self.selected_label_list)
+        self.Bind(wx.EVT_BUTTON, self.__on_add, add_button)
+        wx.Button(panel, wx.ID_OK, label='Y', pos=(220, 250), size=(33,  33))
+        wx.Button(panel, wx.ID_CANCEL, label='N', pos=(254, 250), size=(33, 33))
+        self.__set_selected_labels(items=items)
 
+    def __set_selected_labels(self, items):
+        if not items:
+            return
+        items = items.strip('|')
+        items = items.split('|')
+        for item in items:
+            suggested_list = self.suggested_label_list.Items
+            selected_list = self.selected_label_list.Items
+            if item in suggested_list:
+                self.suggested_label_list.Delete(suggested_list.index(item))
+            if item not in selected_list:
+                self.selected_label_list.Append(item)
+
+    def __on_add(self, event):
+        new_label = self.label_input.GetValue()
+        if not new_label:
+            return False
+        suggest_list = self.suggested_label_list.Items
+        selected_list = self.selected_label_list.Items
+        if new_label in suggest_list:
+            self.suggested_label_list.Delete(suggest_list.index(new_label))
+        if new_label not in selected_list:
+            self.selected_label_list.Append(new_label)
+        self.label_input.Clear()
+
+    def __double_click_on_suggested_label_list(self, event):
+        self.selected_label_list.Append(self.suggested_label_list.GetStringSelection())
+        self.suggested_label_list.Delete(self.suggested_label_list.GetSelection())
+
+    def __double_click_on_selected_label_list(self, event):
+        self.suggested_label_list.Append(self.selected_label_list.GetStringSelection())
+        self.selected_label_list.Delete(self.selected_label_list.GetSelection())
+
+    def get_selected_item(self):
+        items = self.selected_label_list.Items
+        return '|'.join(items)
 
 if __name__ == '__main__':
     import time
     app = wx.App()
     print time.time()
     login = IssueDialog()
-
     login.Show()
-
     app.MainLoop()

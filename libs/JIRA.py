@@ -79,11 +79,11 @@ class JIRA(object):
         }
 
     def aaa(self):
-        # self.__cookie = cookielib.LWPCookieJar()
-        # self.__opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(self.__cookie))
-        # urllib2.install_opener(self.__opener)
+        self.__cookie = cookielib.LWPCookieJar()
+        self.__opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(self.__cookie))
+        urllib2.install_opener(self.__opener)
         req = urllib2.Request('https://jira-cstm.qualcomm.com/jira/rest/api/2/search?jql=project+in+(CHNAPSS)+and+reporter=c_youwu&maxResults=1&startAt=0')
-        # req.add_header('Authorization', 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1])
+        req.add_header('Authorization', 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1])
         response = urllib2.urlopen(req)
         print response.read()
 
@@ -109,7 +109,7 @@ class JIRA(object):
         # self.__cookie = cookielib.LWPCookieJar()
         # self.__opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(self.__cookie))
         # urllib2.install_opener(self.__opener)
-        req = urllib2.Request('https://jira-cstm-tools.qualcomm.com/jira/')
+        req = urllib2.Request('https://jira-cstm.qualcomm.com/jira/')
         req.add_header('Authorization', 'Basic %s' % encodestring('%s:%s' % (self.__username, self.__password))[:-1])
         try:
             urllib2.urlopen(req)
@@ -135,10 +135,10 @@ class JIRA(object):
 
 if __name__ == '__main__':
     import time
-    jira = JIRA('qrd_automation', '1234Abcd')
+    jira = JIRA('c_youwu', 'Lct`12`12')
     print time.time()
     print jira.authorization()
-    jira.get()
+    print jira.aaa()
     print time.time()
     # import time
     # print jira.aaa()

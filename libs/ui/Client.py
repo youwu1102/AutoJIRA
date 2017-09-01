@@ -22,7 +22,7 @@ class Client(wx.Frame):
         main_box.Add(toolbar_box, 1, wx.EXPAND)
         main_box.Add(tree_and_grid_box, 7, wx.EXPAND)
         self.panel.SetSizer(main_box)
-        #self.__open_login()
+        self.__open_login()
 
     def __open_login(self):
         login = LoginDialog()
@@ -36,10 +36,7 @@ class Client(wx.Frame):
         toolbar_box = wx.BoxSizer(wx.HORIZONTAL)  # 工具栏
         create_issue_button = wx.Button(self.panel, -1, 'Create Issue', size=(-1, -1))
         self.Bind(wx.EVT_BUTTON, self.__create_issue, create_issue_button)
-
-
         toolbar_box.Add(create_issue_button)
-
         return toolbar_box
 
     def __init_grid_and_tree_box(self):
@@ -64,16 +61,9 @@ class Client(wx.Frame):
         return tree_and_grid_box
 
     def __create_issue(self, event):
-        import time
-        for x in range(1000):
-            print 'start:  %s' % time.time()
-            issue = IssueDialog()
-            print 'end  :  %s' % time.time()
-            issue.Destroy()
-            time.sleep(0.5)
-        result = issue.ShowModal()
-        if result == wx.ID_CANCEL:
-            issue.Destroy()
+        issue = IssueDialog()
+        issue.ShowModal()
+        issue.Destroy()
 
 
 

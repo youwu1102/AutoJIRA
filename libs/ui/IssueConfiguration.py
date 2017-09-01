@@ -20,28 +20,28 @@ issue_type = {
 crash = {
     name: 'Crash',
     choice: ['', 'No', 'Yes'],
-    default: 'No',
+    default: '',
     id: 'customfield_12904'
 }
 
 repeatability = {
     name: 'Repeatability',
     choice: ['', 'Not Attempted', 'Cannot Replicate', 'Replicates With Effort', 'Easily Replicates'],
-    default: 'Easily Replicates',
+    default: '',
     id: 'customfield_10455'
 }
 
 severity = {
     name: 'Severity',
     choice: ['', 'Blocker', 'Critical', 'Major', 'Moderate', 'Minor', 'Trivial', 'None Set', 'Cosmetic', 'HIGH', 'LOW', 'MEDIUM', 'UNKNOWN', 'None'],
-    default: 'HIGH',
+    default: '',
     id: 'customfield_10102'
 }
 
 components ={
     name: 'Components',
     choice: ['AP-AU_Sanity', 'AP-3rdPartyAPK', 'AP-LA-Stability', 'test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9'],
-    default: 'AP-LA-Stability',
+    default: '',
     id: 'components'
 }
 
@@ -53,7 +53,7 @@ product_name = {
              'MSM8610.LA.1.8.7', 'MSM8610.LA.1.9', 'MSM8610.LA.1.9.1', 'MSM8610.LA.1.9.2', 'MSM8610.LA.1.9.3',
              'MSM8610.LA.2.0', 'MSM8610.LA.2.1', 'MSM8626.LA.1.04', 'MSM8905.LA.1.4', 'MSM8905.LF.1.2', 'MSM8909.LA.1.0',
              'MSM8909.LA.1.1', 'MSM8909.LA.1.1.c4', 'MSM8909.LA.1.2'],
-    default: 'MSM8909.LA.1.1',
+    default: '',
     id: 'customfield_21339'
 }
 
@@ -62,21 +62,21 @@ test_group = {
     choice: ['', 'AlphaCustomer', 'APT CHN', 'APT Pactera', 'APT QIPL', 'CE', 'CST CHN', 'CST CIENET', 'DTE',
              'MST CHN', 'PDT CHN', 'PDT CIENET NJ', 'PDT QIPL', 'APT NEU', 'CIT CHN', 'GP PAC', 'GP CHN',
              'FUT', 'PTT CHN'],
-    default: 'APT CHN',
+    default: '',
     id: 'customfield_11746'
 }
 
 test_phase = {
     name: 'Test Phase',
     choice: ['', 'Bring-Up', 'Pre-FC', 'Pre-Silicon', 'FC-to-CS', 'Post-CS'],
-    default: 'Pre-FC',
+    default: '',
     id: 'customfield_10456'
 }
 
 area = {
     name: 'Area',
     choice: ['', 'BSP', 'BT', 'FM', 'GPS', 'LA', 'MM', 'NFC', 'UI', 'WLAN'],
-    default: 'LA',
+    default: '',
     id: 'customfield_10388'
 }
 
@@ -90,21 +90,21 @@ la_functionality = {
              'Linux_Stability_S3SystemStability', 'LinuxCommon', 'Logging', 'Memory', 'OTA/Recovery', 'PMIC', 'Power',
              'QDSS', 'Sensors', 'ThermalDriver', 'Tools', 'Android_Telephony_IMS_VT', 'VRService', 'VRSDK', 'Drones_afc',
              'Drones_dspal', 'Drones_flight'],
-    default: 'Linux_Stability_KernelStability',
+    default: '',
     id: 'customfield_21725'
 }
 
 mm_functionality = {
     name: 'MM Functionality',
     choice: ['', 'Android_Audio_ACDB', 'Android_Audio_Codec_Driver', 'Android_Audio_Framework', 'Not MM Issue'],
-    default: 'Not MM Issue',
+    default: '',
     id: 'customfield_21726'
 }
 
 ui_functionality = {
     name: 'UI Functionality',
     choice: ['', 'APP_Framework', 'Camera', 'China_Carrier_APPs', 'Contacts', 'Not UI Issue'],
-    default: 'Not UI Issue',
+    default: '',
     id: 'customfield_21727'
 }
 
@@ -112,14 +112,14 @@ cnss_functionality = {
     name: 'CNSS Functionality',
     choice: ['', 'NotWCNIssue', 'WLAN_Host', 'WLAN_FW', 'WLAN_Coex', 'BT_Host', 'BT_FW', 'BT_Coex', 'FM_Host',
              'FM_FW', 'FM_Coex', 'NFC_Host', 'NFC_FW', 'NFC_Coex', 'GPS', 'Drones_connectivity'],
-    default: 'NotWCNIssue',
+    default: '',
     id: 'customfield_23010'
 }
 
 bsp_functionality = {
     name: 'BSP Functionality',
     choice: ['', 'BAM/TSENS/ADC', 'Clock', 'DDR', 'Diag/QMI/IPCRouter', 'Not BSP Issue'],
-    default: 'Not BSP Issue',
+    default: '',
     id: 'customfield_21736'
 }
 
@@ -136,61 +136,69 @@ customer_name = {
     choice: ['', 'BBK/Vivo', 'Datang', 'Feixun', 'Foxda', 'Gionee', 'Heyuan/Tinno', 'Hisense', 'Huaqin',
              'Huawei', 'Huiye', 'Internal', 'Lenovo', 'Longcheer', 'MOTO(Motorola)', 'OPPO', 'Others', 'TCL',
              'Tianyu/K-Touch', 'Wingtech', 'Xiaomi', 'Yulong/Coolpad', 'ZTE'],
-    default: 'BBK/Vivo',
+    default: '',
     id: 'customfield_10805'
 }
 
 category_type = {
     name: 'Category Type',
     choice: ['', 'Function', 'Stability', 'Power', 'Performance', 'Compatibility', 'Thermal'],
-    default: 'Function',
+    default: '',
     id: 'customfield_11073'
 }
 
 summary = {
     name: 'Summary',
-    default: 'summary&summary[summary]',
+    default: '',
     id: 'summary'
 }
 
 description = {
     name: 'Description',
-    default: 'description\ndescription\ndescription\ndescription',
+    default: '',
     id: 'description'
 }
 
 log_link = {
     name: 'Log link',
-    default: '\\\\log_link',
+    default: '',
     id: 'customfield_21324'
 }
 
 sr_number = {
     name: 'SR Number',
-    default: 'sr_number',
+    default: '',
     id: 'customfield_12727'
 }
 
 external_jira_id = {
     name: 'External JIRA ID',
-    default: 'external_jira_id',
+    default: '',
     id: 'customfield_21720'
 }
 
 serial_number = {
     name: 'Serial Number',
-    default: 'serial_number',
+    default: '',
     id: 'customfield_14929'
 }
 
 mcn_number = {
     name: 'MCN number',
-    default: 'mcn_number',
+    default: '',
     id: 'customfield_14930'
 }
 
 meta_build_location = {
     name: 'Meta Build Location',
-    default: 'meta_build_location',
+    default: '',
     id: 'customfield_14016'
+}
+
+labels = {
+    name: 'Labels',
+    choice: ['FrameworkReboot', 'UIFreeze', 'ANR', 'Tombstone', 'AppCrash', 'TZCrash', 'ModemCrash',
+             'RPMCrash', 'WLANCrash'],
+    default: '',
+    id: 'labels'
 }
