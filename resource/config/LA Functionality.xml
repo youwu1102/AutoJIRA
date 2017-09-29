@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <option value=""></option>
+    <option value="Not LA Issue"></option>
+    <option value="Android_Performance_Benchmarks"></option>
+    <option value="Android_Performance_Display"></option>
+    <option value="Android_Performance_Memory"></option>
+    <option value="Android_Performance_MM"></option>
+    <option value="Android_Performance_Systems"></option>
+    <option value="Android_Telephony_Common"></option>
+    <option value="Android_Telephony_Data"></option>
+    <option value="Android_Telephony_IMS"></option>
+    <option value="Android_Telephony_RIL"></option>
+    <option value="Android_Telephony_SMS/MMS"></option>
+    <option value="Android_Telephony_UIM/Contact/STK"></option>
+    <option value="Android_Telephony_Voice"></option>
+    <option value="Boot"></option>
+    <option value="Charging"></option>
+    <option value="Clock"></option>
+    <option value="CTASecurity"></option>
+    <option value="CTS"></option>
+    <option value="Factory"></option>
+    <option value="FileSystem"></option>
+    <option value="Linux_Stability_FrameworkStability"></option>
+    <option value="Linux_Stability_KernelStability"></option>
+    <option value="Linux_Stability_S2KernelStability"></option>
+    <option value="Linux_Stability_S3SystemStability"></option>
+    <option value="LinuxCommon"></option>
+    <option value="Logging"></option>
+    <option value="Memory"></option>
+    <option value="OTA/Recovery"></option>
+    <option value="PMIC"></option>
+    <option value="Power"></option>
+    <option value="QDSS"></option>
+    <option value="Sensors"></option>
+    <option value="ThermalDriver"></option>
+    <option value="Tools"></option>
+    <option value="Android_Telephony_IMS_VT"></option>
+    <option value="VRService"></option>
+    <option value="VRSDK"></option>
+    <option value="Drones_afc"></option>
+    <option value="Drones_dspal"></option>
+    <option value="Drones_flight"></option>
+</root>

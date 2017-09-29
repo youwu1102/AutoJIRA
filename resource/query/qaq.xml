@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<FILTER>
+		<RULE>
+			<COND FIELD="project" EXPRESSION="in" VALUE="CHNAPSS"></COND>
+			<COND FIELD="status" EXPRESSION="in" VALUE="Open"></COND>
+			<COND FIELD="reporter" EXPRESSION="in" VALUE="c_huyang"></COND>
+		</RULE>
+	</FILTER>
+	<DISPLAY>
+		<FIELD>Key</FIELD>
+		<FIELD>Summary</FIELD>
+		<FIELD>Reporter</FIELD>
+		<FIELD>Status</FIELD>
+	</DISPLAY>
+	<ORDER>
+		<BY FIELD="Key" SORT="DESC"></BY>
+		<!--<BY NAME="Key" SORT="ASC"></BY>-->
+	</ORDER>
+
+</Root>

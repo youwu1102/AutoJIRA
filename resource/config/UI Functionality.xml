@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <option value=""></option>
+    <option value="Not UI Issue"></option>
+    <option value="APP_Framework"></option>
+    <option value="Camera"></option>
+    <option value="China_Carrier_APPs"></option>
+    <option value="Contacts"></option>
+    <option value="Gallery"></option>
+    <option value="IME"></option>
+    <option value="Language"></option>
+    <option value="Launcher"></option>
+    <option value="Messaging"></option>
+    <option value="Download_DocumentUI"></option>
+    <option value="Music_Video_Audio"></option>
+    <option value="P1_APK"></option>
+    <option value="P2_P3_APK"></option>
+    <option value="QGP_AMX"></option>
+    <option value="QGP_Arch"></option>
+    <option value="QGP_ATT"></option>
+    <option value="QGP_Com"></option>
+    <option value="QGP_EU"></option>
+    <option value="QGP_OpenMarket"></option>
+    <option value="QGP_TEF"></option>
+    <option value="QGP_TMobile"></option>
+    <option value="QGP_VDF"></option>
+    <option value="Regionals"></option>
+    <option value="Settings"></option>
+    <option value="Sys_Framework"></option>
+    <option value="SystemAPP"></option>
+    <option value="SystemUI"></option>
+    <option value="WebKit"></option>
+    <option value="SetupWizard"></option>
+    <option value="FlatLauncher"></option>
+</root>

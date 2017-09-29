@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <option value=""></option>
+    <option value="Not MM Issue"></option>
+    <option value="Android_Audio_ACDB"></option>
+    <option value="Android_Audio_Codec_Driver"></option>
+    <option value="Android_Audio_Framework"></option>
+    <option value="Android_Audio_LPASS_Driver"></option>
+    <option value="Android_Audio_Voice"></option>
+    <option value="Android_Camera_Frameworks"></option>
+    <option value="Android_Camera_Perf_KPI_Power"></option>
+    <option value="Android_Camera_Stability"></option>
+    <option value="Android_Camera_Tuning"></option>
+    <option value="Android_Display_SF_HALS"></option>
+    <option value="Android_Display_UEFI"></option>
+    <option value="Android_Display_MDP_Driver"></option>
+    <option value="Android_Display_MHL_HDMI"></option>
+    <option value="Android_Display_Panels"></option>
+    <option value="Android_Display_PostProcessing"></option>
+    <option value="Android_Display_QDPM_tool"></option>
+    <option value="Android_Display_QDCM_tool"></option>
+    <option value="Camcorder"></option>
+    <option value="Camera_Eztune"></option>
+    <option value="Graphic"></option>
+    <option value="Playback"></option>
+    <option value="Streaming"></option>
+    <option value="WFD"></option>
+    <option value="Drones_camera"></option>
+    <option value="Drones_graphics"></option>
+    <option value="Drones_video"></option>
+    <option value="Touch_LegacyTouch"></option>
+    <option value="iTouch_Algo"></option>
+</root>

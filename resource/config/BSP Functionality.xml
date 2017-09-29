@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <option value=""></option>
+    <option value="Not BSP Issue"></option>
+    <option value="BAM/TSENS/ADC"></option>
+    <option value="Clock"></option>
+    <option value="DDR"></option>
+    <option value="Diag/QMI/IPCRouter"></option>
+    <option value="EFS/MPSS"></option>
+    <option value="ICB/BusScaling"></option>
+    <option value="IODevices"></option>
+    <option value="ModemKernel"></option>
+    <option value="NHLOSPower/ACPM"></option>
+    <option value="PMIC"></option>
+    <option value="QDSS"></option>
+    <option value="QDUTT-DDI"></option>
+    <option value="QDUTT-UI"></option>
+    <option value="QMI/IPCRouter"></option>
+    <option value="Regulator"></option>
+    <option value="RIDL/LogkitII"></option>
+    <option value="RPM"></option>
+    <option value="SBL"></option>
+    <option value="SBLStorage"></option>
+    <option value="SDCC/RemoteStorage/RFSA"></option>
+    <option value="SPI/I2C/UART/Peripheral"></option>
+    <option value="SPMI/PMICArbiter"></option>
+    <option value="Stability"></option>
+    <option value="StorageTools/QPST/T32"></option>
+    <option value="TargetPower"></option>
+    <option value="Thermal"></option>
+    <option value="ToBedeleted2"></option>
+    <option value="ToBedeleted3"></option>
+    <option value="TouchScreen"></option>
+    <option value="TrickleCharging"></option>
+    <option value="TUNA/TimeServices"></option>
+    <option value="TZ"></option>
+    <option value="USB"></option>
+    <option value="Drones_platform"></option>
+    <option value="Drones_hw"></option>
+</root>

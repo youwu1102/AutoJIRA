@@ -2,27 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aea7f2f-4c92-449e-a9c8-7c4c4043474d" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\Configuration.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\Utility.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\tmp.txt" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\resource\icon\save.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\GlobalVariable.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\tmp.txt" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\Issue.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\Run.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\JIRA.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\resource\icon\import.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\LoginDialog.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\Client.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\resource\icon\save.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\zCreateIssueDialog.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\JIRA1.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\resource\icon\export.png" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\tmp.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\JIRA1.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\Configuration.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\Client.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\__init__.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\__init__.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\zBatchSubmissionDialog.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\IssueConfiguration.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\resource\icon\import.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\GlobalVariable.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\JIRA.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\LoginDialog.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\Utility.py" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\Run.py" afterPath="" />
     </list>
     <ignored path="AutoJIRA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -159,8 +159,6 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -169,74 +167,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="AutoJIRA" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoJIRA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -522,13 +452,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26332623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3596882" sideWeight="0.10927505" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -538,7 +469,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3596882" sideWeight="0.89072496" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />

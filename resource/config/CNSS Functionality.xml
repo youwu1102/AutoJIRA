@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <option value=""></option>
+    <option value="NotWCNIssue"></option>
+    <option value="WLAN_Host"></option>
+    <option value="WLAN_FW"></option>
+    <option value="WLAN_Coex"></option>
+    <option value="BT_Host"></option>
+    <option value="BT_FW"></option>
+    <option value="BT_Coex"></option>
+    <option value="FM_Host"></option>
+    <option value="FM_FW"></option>
+    <option value="FM_Coex"></option>
+    <option value="NFC_Host"></option>
+    <option value="NFC_FW"></option>
+    <option value="NFC_Coex"></option>
+    <option value="GPS"></option>
+    <option value="Drones_connectivity"></option>
+</root>
