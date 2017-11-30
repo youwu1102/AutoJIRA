@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aea7f2f-4c92-449e-a9c8-7c4c4043474d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/JIRA.py" afterPath="$PROJECT_DIR$/libs/JIRA.py" />
     </list>
     <ignored path="AutoJIRA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,34 +26,157 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="yIssueFromXML.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromXML.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+              <caret line="29" column="76" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="29" selection-end-column="76" />
+              <caret line="35" column="76" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="35" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zLoginDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/zLoginDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+              <folding>
+                <marker date="1512034030970" expanded="true" signature="104:2535" ph="..." />
+                <marker date="1512034030970" expanded="true" signature="2372:2453" ph="..." />
+                <marker date="1512034030970" expanded="true" signature="2499:2535" ph="..." />
+                <marker date="1512034030970" expanded="true" signature="2563:2644" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ThreadManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <marker date="1512034030950" expanded="true" signature="221:2880" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="609:842" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2111:2302" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2131:2302" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2341:2371" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2407:2439" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2480:2880" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2583:2880" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2609:2835" ph="..." />
+                <marker date="1512034030950" expanded="true" signature="2910:3049" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tmp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/tmp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yIssueFromDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="119">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zProgressDialog.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/ui/zProgressDialog.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Client.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="223">
+              <caret line="167" column="8" lean-forward="false" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
               <folding>
-                <element signature="e#623#7583#0" expanded="false" />
+                <marker date="1512034030960" expanded="true" signature="618:7583" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="642:1282" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="1467:1522" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="1554:2064" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="2105:4453" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="2135:3398" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="3429:4132" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="3762:3928" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="4491:4601" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="4643:5290" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="5174:5290" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="5323:5879" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="5480:5824" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="5565:5763" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="5924:6186" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="6217:6787" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="6251:6425" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="6818:6840" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="6870:7097" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="7136:7280" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="7317:7374" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="7407:7583" ph="..." />
+                <marker date="1512034030960" expanded="true" signature="7614:7692" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JIRA.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/JIRA.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="74" column="1" lean-forward="false" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+              <folding>
+                <element signature="e#149#162#0" expanded="false" />
+                <marker date="1512034415341" expanded="true" signature="2403:3106" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalVariable.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/GlobalVariable.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/Configuration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,8 +256,8 @@
         <option value="$PROJECT_DIR$/libs/GlobalVariable.py" />
         <option value="$PROJECT_DIR$/libs/ui/Client.py" />
         <option value="$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py" />
-        <option value="$PROJECT_DIR$/libs/JIRA.py" />
         <option value="$PROJECT_DIR$/libs/ui/Issue.py" />
+        <option value="$PROJECT_DIR$/libs/JIRA.py" />
       </list>
     </option>
   </component>
@@ -164,6 +287,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,7 +310,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,30 +584,44 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
+    <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26284876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596882" sideWeight="0.10927505" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3580247" sideWeight="0.89072496" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596882" sideWeight="0.89072496" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27921093" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596882" sideWeight="0.10927505" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596882" sideWeight="0.89072496" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26284876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,11 +665,221 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Run.py">
+    <entry file="file://C:/Environment/Python27/Lib/os.py" />
+    <entry file="file://C:/Environment/Python27/Lib/httplib.py" />
+    <entry file="file://$USER_HOME$/Desktop/jira/JiraTemplate.txt" />
+    <entry file="file://C:/Environment/Python27/Lib/urllib2.py" />
+    <entry file="file://$USER_HOME$/Documents/GitHub/Stability_Tools/RobotScriptManager/RobotScriptManager.py" />
+    <entry file="file://C:/Environment/Python27/Lib/xml/dom/expatbuilder.py" />
+    <entry file="file://C:/Environment/Python27/Lib/xml/dom/minidom.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/948745402/__builtin__.py" />
+    <entry file="file://C:/Git/Stability_UI_Stress/client/UiStressTool.py" />
+    <entry file="file:////dine/QCT_APSS_APT/APT_SH/APT_LA/02LAPT/Stability/06-UIStress/Fight/UiStressTool.py" />
+    <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_core.py" />
+    <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_controls.py" />
+    <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_windows.py" />
+    <entry file="file://$PROJECT_DIR$/libs/Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zProgressDialog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3655">
+          <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="283" selection-end-column="25" />
+          <caret line="237" column="47" lean-forward="false" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#9476#10022#0" expanded="false" />
+            <element signature="e#10064#10613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zBatchSubmitIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueConfiguration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Github/testarrosa/testarrosaweb/settings/testarrosa_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/tmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ThreadManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <marker date="1512034030950" expanded="true" signature="221:2880" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="609:842" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2111:2302" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2131:2302" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2341:2371" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2407:2439" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2480:2880" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2583:2880" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2609:2835" ph="..." />
+            <marker date="1512034030950" expanded="true" signature="2910:3049" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromXML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <caret line="29" column="76" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="29" selection-end-column="76" />
+          <caret line="35" column="76" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="35" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zLoginDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding>
+            <marker date="1512034030970" expanded="true" signature="104:2535" ph="..." />
+            <marker date="1512034030970" expanded="true" signature="2372:2453" ph="..." />
+            <marker date="1512034030970" expanded="true" signature="2499:2535" ph="..." />
+            <marker date="1512034030970" expanded="true" signature="2563:2644" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="168" column="8" lean-forward="false" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+          <folding>
+            <marker date="1512034030960" expanded="true" signature="618:7583" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="642:1282" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="1467:1522" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="1554:2064" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="2105:4453" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="2135:3398" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="3429:4132" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="3762:3928" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="4491:4601" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="4643:5290" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5174:5290" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5323:5879" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5480:5824" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5565:5763" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5924:6186" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6217:6787" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6251:6425" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6818:6840" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6870:7097" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7136:7280" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7317:7374" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7407:7583" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7614:7692" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/GlobalVariable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/JIRA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="74" column="1" lean-forward="false" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
+          <folding>
+            <element signature="e#149#162#0" expanded="false" />
+            <marker date="1512034415341" expanded="true" signature="2403:3106" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -549,7 +896,29 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="38" />
           <folding>
-            <element signature="e#623#7583#0" expanded="false" />
+            <marker date="1512034030960" expanded="true" signature="618:7583" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="642:1282" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="1467:1522" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="1554:2064" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="2105:4453" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="2135:3398" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="3429:4132" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="3762:3928" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="4491:4601" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="4643:5290" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5174:5290" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5323:5879" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5480:5824" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5565:5763" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5924:6186" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6217:6787" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6251:6425" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6818:6840" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6870:7097" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7136:7280" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7317:7374" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7407:7583" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7614:7692" ph="..." />
           </folding>
         </state>
       </provider>
@@ -571,9 +940,11 @@
     <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_windows.py" />
     <entry file="file://$PROJECT_DIR$/Run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -587,10 +958,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="223">
+          <caret line="167" column="8" lean-forward="false" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
           <folding>
-            <element signature="e#623#7583#0" expanded="false" />
+            <marker date="1512034030960" expanded="true" signature="618:7583" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="642:1282" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="1467:1522" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="1554:2064" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="2105:4453" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="2135:3398" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="3429:4132" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="3762:3928" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="4491:4601" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="4643:5290" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5174:5290" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5323:5879" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5480:5824" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5565:5763" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="5924:6186" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6217:6787" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6251:6425" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6818:6840" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="6870:7097" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7136:7280" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7317:7374" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7407:7583" ph="..." />
+            <marker date="1512034030960" expanded="true" signature="7614:7692" ph="..." />
           </folding>
         </state>
       </provider>

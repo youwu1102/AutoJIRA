@@ -72,7 +72,7 @@ import time
         # }
 
 def aaa():
-
+A
     url = 'https://jira-cstm.qualcomm.com/jira/rest/api/2/search?jql='
     search = '"project"+in+(CHNAPSS)+and+status+in+("Open",Closed,"Preliminary Analysis")+and+"Product Name"+in+(SDM845.LA.1.0)+&maxResults=1&startAt=0'
     a = urllib.quote('search')
