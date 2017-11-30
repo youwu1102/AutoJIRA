@@ -36,11 +36,12 @@ class Client(wx.Frame):
         self.panel.SetSizer(main_box)
         self.thread_manager = ThreadManager(data=self.grid_data, update=self.__update_grid)
         self.thread_manager.setDaemon(True)
-        #self.__open_login()
         self.thread_manager.start()
+        self.__open_login()
+
 
     def __open_login(self):
-        login = LoginDialog()
+        login = LoginDialog(self.thread_manager)
         result = login.ShowModal()
         if result == wx.ID_CANCEL:
             login.Destroy()

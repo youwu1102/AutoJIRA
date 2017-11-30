@@ -1,10 +1,6 @@
 import os
-hostname = os.environ['COMPUTERNAME']
-if hostname == 'APT-GFX-SH002':
-    from libs.ui.Client import Client
-else:
-    from libs.ui.ClientSimplify import Client
 import wx
+from libs.ui.Client import Client
 
 
 if __name__ == '__main__':

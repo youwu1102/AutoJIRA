@@ -3,7 +3,7 @@ from xml.dom.minidom import parse
 import traceback
 from GlobalVariable import config_folder, dict_query_config
 from os.path import join
-import win32clipboard
+#import win32clipboard
 from os import sep
 
 
