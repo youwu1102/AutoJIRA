@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1aea7f2f-4c92-449e-a9c8-7c4c4043474d" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\.gitattributes" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\tmp.txt" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\Issue.py" afterPath="" />
@@ -23,10 +24,24 @@
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\LoginDialog.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\Utility.py" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\c_youwu\PycharmProjects\AutoJIRA\Run.py" afterPath="" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AutoJIRA.iml" afterPath="$PROJECT_DIR$/.idea/AutoJIRA.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Run.py" afterPath="$PROJECT_DIR$/Run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/GlobalVariable.py" afterPath="$PROJECT_DIR$/libs/GlobalVariable.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/JIRA.py" afterPath="$PROJECT_DIR$/libs/JIRA.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/ThreadManager.py" afterPath="$PROJECT_DIR$/libs/ThreadManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/Utility.py" afterPath="$PROJECT_DIR$/libs/Utility.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/ui/Client.py" afterPath="$PROJECT_DIR$/libs/ui/Client.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/ui/tmp.py" afterPath="$PROJECT_DIR$/libs/ui/tmp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/ui/zLoginDialog.py" afterPath="$PROJECT_DIR$/libs/ui/zLoginDialog.py" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="AutoJIRA.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +64,126 @@
     <favorites_list name="AutoJIRA" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< Updated upstream
     <leaf />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="yIssueFromXML.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromXML.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+              <caret line="29" column="76" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="29" selection-end-column="76" />
+              <caret line="35" column="76" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="35" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zLoginDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/zLoginDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadManager.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ThreadManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="81" column="23" lean-forward="true" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tmp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/tmp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="86" column="40" lean-forward="true" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="yIssueFromDialog.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromDialog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Run.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="168" column="8" lean-forward="false" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JIRA.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libs/JIRA.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+              <folding>
+                <element signature="e#149#162#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalVariable.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/GlobalVariable.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/Configuration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+>>>>>>> Stashed changes
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,15 +194,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GlobaVariable</find>
-      <find>LabelsDialog</find>
-      <find>st</find>
-      <find>RIG</find>
-      <find>UI</find>
-      <find>__create_issue</find>
-      <find>Export_Button</find>
-      <find>input</find>
-      <find>external_jira_id_input</find>
       <find>customfield_14016</find>
       <find>Datang</find>
       <find>__customer_name</find>
@@ -90,6 +215,15 @@
       <find>la_fu</find>
       <find>customfield_21725</find>
       <find>area</find>
+      <find>im</find>
+      <find>on_import</find>
+      <find>lab</find>
+      <find>se</find>
+      <find>choice</find>
+      <find>list_box</find>
+      <find>__double_click_on_suggested_label_list</find>
+      <find>thread_manager</find>
+      <find>__thread_manager</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui</dir>
@@ -104,7 +238,6 @@
         <option value="$PROJECT_DIR$/libs/ui/client.py" />
         <option value="$PROJECT_DIR$/libs/ui/1.txt" />
         <option value="$PROJECT_DIR$/libs/Connection.py" />
-        <option value="$PROJECT_DIR$/Run.py" />
         <option value="$PROJECT_DIR$/libs/jira.py" />
         <option value="$PROJECT_DIR$/libs/JIRA1.py" />
         <option value="$USER_HOME$/Desktop/jira/JiraTemplate.txt" />
@@ -112,7 +245,6 @@
         <option value="$PROJECT_DIR$/libs/Configuration.py" />
         <option value="$PROJECT_DIR$/libs/ui/issue_config.py" />
         <option value="$PROJECT_DIR$/libs/ui/tmp.py" />
-        <option value="$PROJECT_DIR$/libs/Utility.py" />
         <option value="$PROJECT_DIR$/libs/ui/Default.xml" />
         <option value="$PROJECT_DIR$/libs/GlobaVariable.py" />
         <option value="$PROJECT_DIR$/libs/ui/IssueConfiguration.py" />
@@ -121,11 +253,16 @@
         <option value="$PROJECT_DIR$/libs/ui/BatchSubmissionDialog.py" />
         <option value="$PROJECT_DIR$/libs/ui/CreateIssueDialog.py" />
         <option value="$PROJECT_DIR$/libs/ui/LoginDialog.py" />
-        <option value="$PROJECT_DIR$/libs/GlobalVariable.py" />
-        <option value="$PROJECT_DIR$/libs/ui/Client.py" />
-        <option value="$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py" />
-        <option value="$PROJECT_DIR$/libs/JIRA.py" />
         <option value="$PROJECT_DIR$/libs/ui/Issue.py" />
+        <option value="$PROJECT_DIR$/libs/Utility.py" />
+        <option value="$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py" />
+        <option value="C:/Github/testarrosa/testarrosaweb/settings/testarrosa_settings.py" />
+        <option value="$PROJECT_DIR$/Run.py" />
+        <option value="$PROJECT_DIR$/libs/ui/zLoginDialog.py" />
+        <option value="$PROJECT_DIR$/libs/ui/Client.py" />
+        <option value="$PROJECT_DIR$/libs/ThreadManager.py" />
+        <option value="$PROJECT_DIR$/libs/GlobalVariable.py" />
+        <option value="$PROJECT_DIR$/libs/JIRA.py" />
       </list>
     </option>
   </component>
@@ -134,6 +271,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
+<<<<<<< Updated upstream
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -147,6 +285,10 @@
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
+=======
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -161,6 +303,11 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< Updated upstream
+=======
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> Stashed changes
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,8 +318,11 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< Updated upstream
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> Stashed changes
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,9 +359,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Python27\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/ui" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AutoJIRA" />
@@ -239,6 +389,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< Updated upstream
     <configuration default="false" name="LoginDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -258,6 +409,9 @@
       <method />
     </configuration>
     <configuration default="false" name="JIRA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="JIRA" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> Stashed changes
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -275,20 +429,28 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< Updated upstream
     <configuration default="false" name="CreateIssueDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration name="Run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> Stashed changes
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/ui" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AutoJIRA" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+<<<<<<< Updated upstream
       <option name="SCRIPT_NAME" value="C:\Users\c_youwu\PycharmProjects\AutoJIRA\libs\ui\zCreateIssueDialog.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run.py" />
+>>>>>>> Stashed changes
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -421,20 +583,38 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration name="zCreateIssueDialog" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/libs/ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AutoJIRA" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.IssueDialog" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Client" />
-      <item index="2" class="java.lang.String" itemvalue="Python.LoginDialog" />
-      <item index="3" class="java.lang.String" itemvalue="Python.JIRA" />
-      <item index="4" class="java.lang.String" itemvalue="Python.CreateIssueDialog" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Client" />
+      <item index="1" class="java.lang.String" itemvalue="Python.JIRA" />
+      <item index="2" class="java.lang.String" itemvalue="Python.CreateIssueDialog" />
+      <item index="3" class="java.lang.String" itemvalue="Python.zCreateIssueDialog" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Run" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Client" />
-        <item index="1" class="java.lang.String" itemvalue="Python.JIRA" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CreateIssueDialog" />
-        <item index="3" class="java.lang.String" itemvalue="Python.IssueDialog" />
-        <item index="4" class="java.lang.String" itemvalue="Python.LoginDialog" />
+        <item index="0" class="java.lang.String" itemvalue="Python.JIRA" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Run" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Client" />
+        <item index="3" class="java.lang.String" itemvalue="Python.zCreateIssueDialog" />
+        <item index="4" class="java.lang.String" itemvalue="Python.CreateIssueDialog" />
       </list>
     </recent_temporary>
   </component>
@@ -452,6 +632,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
@@ -476,6 +657,34 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="-8" y="0" width="1378" height="780" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596882" sideWeight="0.10927505" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3580247" sideWeight="0.89072496" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27921093" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -519,11 +728,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://C:/Environment/Python27/Lib/os.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -595,6 +805,63 @@
       </provider>
     </entry>
     <entry file="file://C:/Git/Stability_UI_Stress/client/UiStressTool.py">
+=======
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromXML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zBatchSubmitIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4386">
+          <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="283" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#9476#10022#0" expanded="false" />
+            <element signature="e#10064#10613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zProgressDialog.py">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
@@ -603,6 +870,7 @@
     </entry>
     <entry file="file:////dine/QCT_APSS_APT/APT_SH/APT_LA/02LAPT/Stability/06-UIStress/Fight/UiStressTool.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
@@ -612,6 +880,130 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="9167" column="8" selection-start-line="9167" selection-start-column="8" selection-end-line="9167" selection-end-column="8" />
+=======
+        <state relative-caret-position="1275">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromXML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zBatchSubmitIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="52" column="27" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#9476#10022#0" expanded="false" />
+            <element signature="e#10064#10613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zProgressDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zProgressDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Environment/Python27/Lib/os.py" />
+    <entry file="file://C:/Environment/Python27/Lib/urllib2.py" />
+    <entry file="file://C:/Environment/Python27/Lib/os.py" />
+    <entry file="file://C:/Environment/Python27/Lib/httplib.py" />
+    <entry file="file://$USER_HOME$/Desktop/jira/JiraTemplate.txt" />
+    <entry file="file://C:/Environment/Python27/Lib/urllib2.py" />
+    <entry file="file://$USER_HOME$/Documents/GitHub/Stability_Tools/RobotScriptManager/RobotScriptManager.py" />
+    <entry file="file://C:/Environment/Python27/Lib/xml/dom/expatbuilder.py" />
+    <entry file="file://C:/Environment/Python27/Lib/xml/dom/minidom.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/948745402/__builtin__.py" />
+    <entry file="file://C:/Git/Stability_UI_Stress/client/UiStressTool.py" />
+    <entry file="file:////dine/QCT_APSS_APT/APT_SH/APT_LA/02LAPT/Stability/06-UIStress/Fight/UiStressTool.py" />
+    <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_core.py" />
+    <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_controls.py" />
+    <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_windows.py" />
+    <entry file="file://$PROJECT_DIR$/libs/Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -622,10 +1014,142 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://C:/Environment/Python27/Lib/site-packages/wx-3.0-msw/wx/_windows.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="3109" column="35" selection-start-line="3109" selection-start-column="24" selection-end-line="3109" selection-end-column="35" />
+=======
+    <entry file="file://$PROJECT_DIR$/libs/ui/zCreateIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3655">
+          <caret line="280" column="0" lean-forward="false" selection-start-line="280" selection-start-column="0" selection-end-line="283" selection-end-column="25" />
+          <caret line="237" column="47" lean-forward="false" selection-start-line="237" selection-start-column="47" selection-end-line="237" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+            <element signature="e#9476#10022#0" expanded="false" />
+            <element signature="e#10064#10613#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zBatchSubmitIssueDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueConfiguration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Github/testarrosa/testarrosaweb/settings/testarrosa_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/tmp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="86" column="40" lean-forward="true" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ThreadManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="81" column="23" lean-forward="true" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/yIssueFromXML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <caret line="29" column="76" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="29" selection-end-column="76" />
+          <caret line="35" column="76" lean-forward="false" selection-start-line="31" selection-start-column="58" selection-end-line="35" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/zLoginDialog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/ui/Client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="168" column="8" lean-forward="false" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/GlobalVariable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/JIRA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+          <folding>
+            <element signature="e#149#162#0" expanded="false" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

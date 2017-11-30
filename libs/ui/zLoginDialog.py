@@ -42,14 +42,15 @@ class LoginDialog(wx.Dialog):
         else:
             GlobalVariable.account = account
             GlobalVariable.password = password
-            state, response, error = JIRA.authorization(account=account, password=password)
-            if state == 0:
-                self.refresh_info_text('Success.', 'I')
-                self.Destroy()
-            elif state == 1:
-                self.refresh_info_text('Account or Password is incorrect.', 'E')
-            elif state == 2:
-                self.refresh_info_text('Please check whether JIRA can visit normally.', 'E')
+            self.__thread_manager.append_work(type='login', account=account, password=password, dialog=self)
+
+            # if state == 0:
+            #     self.refresh_info_text('Success.', 'I')
+            #     self.Destroy()
+            # elif state == 1:
+            #     self.refresh_info_text('Account or Password is incorrect.', 'E')
+            # elif state == 2:
+            #     self.refresh_info_text('Please check whether JIRA can visit normally.', 'E')
 
     def refresh_info_text(self, text, type):
         self.info_text.Label = text

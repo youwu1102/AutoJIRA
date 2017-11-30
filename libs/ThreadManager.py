@@ -32,17 +32,14 @@ class ThreadManager(threading.Thread):
             print 'query'
             self.data.remove_all_row_data()
             self.__query(**kwargs)
-        elif work_type == '':
-            self.__a
-
         elif work_type == 'previous':
             pass
         elif work_type == 'next':
             print 'next'
             self.__next(**kwargs)
-
-
-
+        elif work_type == "login":
+            print "login"
+            self.__login(**kwargs)
         else:
             print 'UNKNOW'
         end = time.time()
@@ -72,6 +69,20 @@ class ThreadManager(threading.Thread):
         query = self.data.get_search_string()
         if query:
             self.__query(query=query, start=start, **kwargs)
+
+    def __login(self, **kwargs):
+        print "login"
+        password = kwargs.get('password')
+        account = kwargs.get('account')
+        code, response, traceback = JIRA.authorization(account=account, password=password)
+        if code == 0:
+            CallAfter(self.update, )
+            kwargs.get('dialog').Destroy()
+        # 下面代码没有调试过
+        elif code == 1:
+            pass
+        elif code == 2:
+            print 'Please visit the \'https://jira-cstm.qualcomm.com/\' and check the connection.'
 
     def run(self):
         while True:
