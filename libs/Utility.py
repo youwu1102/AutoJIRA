@@ -3,6 +3,7 @@ from xml.dom.minidom import parse
 import traceback
 from GlobalVariable import config_folder, dict_query_config
 from os.path import join
+
 #import win32clipboard
 from os import sep
 
@@ -202,19 +203,3 @@ def append_tree(tree, root, query):
 
 
 
-
-
-
-            # @staticmethod
-    # def append_test_case(tree, parent, case_path):
-    #     cases = listdir(case_path)
-    #     for case in cases:
-    #         if isdir(join(case_path, case)):
-    #             child = tree.AppendItem(parent, case, 1)
-    #             TestCaseTree.append_test_case(tree=tree, parent=child, case_path=join(case_path, case))
-    #         else:
-    #             if case.endswith('.xml'):
-    #                 if case in ['TestInitialization.xml']:
-    #                     tree.AppendItem(parent, case, 0)
-    #                 else:
-    #                     tree.AppendItem(parent, case, 1)

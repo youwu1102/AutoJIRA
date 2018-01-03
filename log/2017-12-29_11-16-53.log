@@ -1,0 +1,8 @@
+Fri, 29 Dec 2017 11:16:58 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 11:16:58 ThreadManager.py[line:16] INFO {'account': u'zyouwux', 'password': u'Lct123123', 'type': 'login', 'update': <bound method LoginDialog.__update_gui_message of <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003D20798>>, 'dialog': <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003D20798>}
+Fri, 29 Dec 2017 11:16:58 ThreadManager.py[line:48] INFO start login
+Fri, 29 Dec 2017 11:17:01 JIRA.py[line:89] INFO Success
+Fri, 29 Dec 2017 11:17:24 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 11:17:24 ThreadManager.py[line:16] INFO {'filter': '"status"+in+("Open")+ORDER+BY+key+DESC&fields=key,summary,reporter,status', 'start': 0, 'type': 'query', 'max': 100}
+Fri, 29 Dec 2017 11:18:35 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 11:18:35 ThreadManager.py[line:16] INFO {'filter': '"status"+in+("Open")+ORDER+BY+key+DESC&fields=key,summary,reporter,status', 'start': 0, 'type': 'query', 'max': 100}

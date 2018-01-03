@@ -1,0 +1,4 @@
+Wed, 03 Jan 2018 16:10:44 ThreadManager.py[line:15] INFO Add new work:
+Wed, 03 Jan 2018 16:10:44 ThreadManager.py[line:16] INFO {'account': u'zyouwux', 'password': u'Lct123123', 'type': 'login', 'update': <bound method LoginDialog.__update_gui_message of <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003A8D798>>, 'dialog': <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003A8D798>}
+Wed, 03 Jan 2018 16:10:44 ThreadManager.py[line:48] INFO start login
+Wed, 03 Jan 2018 16:10:46 JIRA.py[line:89] INFO Success

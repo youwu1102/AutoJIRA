@@ -1,0 +1,8 @@
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:16] INFO {'account': u'zyouwux', 'password': u'Lct123123', 'type': 'login', 'update': <bound method LoginDialog.__update_gui_message of <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B25798>>, 'dialog': <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B25798>}
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:48] INFO start login
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:16] INFO {'account': u'zyouwux', 'password': u'Lct123123', 'type': 'login', 'update': <bound method LoginDialog.__update_gui_message of <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B25798>>, 'dialog': <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B25798>}
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:24] WARNING Same work is already in process.
+Fri, 29 Dec 2017 17:31:05 ThreadManager.py[line:25] WARNING Skip
+Fri, 29 Dec 2017 17:31:07 JIRA.py[line:89] INFO Success

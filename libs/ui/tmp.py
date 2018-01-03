@@ -1,90 +1,10 @@
-class FooParent(object):
-    def __init__(self):
-        self.parent = 'I\'m the parent.'
-        print 'Parent'
+# -*- encoding:UTF-8 -*-
+import pprint
+self ='self'
+null ='null'
+false ='false'
+true='true'
+d={"expand":"editmeta,renderedFields,transitions,changelog,operations","id":"32799","self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/issue/32799","key":"PLM-1271","fields":{"progress":{"progress":0,"total":0},"summary":"SW Gateway Access blocked to the ticket T-103660 for HSS FE 16A FD1 EP6","customfield_10615":null,"customfield_10617":null,"customfield_10616":null,"customfield_10611":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/customFieldOption/10812","value":"BSP 8100","id":"10812"},"issuetype":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/issuetype/10","id":"10","description":"Support task requested by PLM or other external source.","iconUrl":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/images/icons/issuetypes/exclamation.png","name":"Ticket","subtask":false},"customfield_10610":"Entel Chile","customfield_10613":[{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/customFieldOption/10209","value":"Acknowledge","id":"10209"}],"customfield_10612":"BSP","customfield_10618":null,"timespent":null,"reporter":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/user?username=EBETESC","name":"EBETESC","emailAddress":"betsabe.merari.escott@ericsson.com","avatarUrls":{"16x16":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=xsmall&avatarId=10122","24x24":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=small&avatarId=10122","32x32":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=medium&avatarId=10122","48x48":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?avatarId=10122"},"displayName":"Betsabe Merari Escott","active":true},"updated":"2017-12-04T07:40:29.000+0100","created":"2017-11-30T22:44:56.000+0100","priority":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/priority/4","iconUrl":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/images/icons/priorities/minor.png","name":"Minor","id":"4"},"description":"Hello,\r\n\r\nWe’re working on HSS Upgrade for a new node on Entel Chile network, the Upgrade path is from 16A FD1 EP5 to FD1 EP6, as the same Software level on the rest of HSS nodes on the Customer network.\r\nHowever we have not access to the ticket T-103660, we’re not sure if is due to the package is phased out or is blocked for any other reason.\r\n\r\nCould you please help us to get it?\r\n\r\nThanks in advance.\r\n\r\nBest Regards,\r\n","customfield_10001":null,"customfield_10002":"9223372036854775807","issuelinks":[],"customfield_10810":null,"customfield_10000":null,"subtasks":[],"customfield_11503":null,"status":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/status/3","description":"This issue is being actively worked on at the moment by the assignee.","iconUrl":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/images/icons/statuses/inprogress.png","name":"In Progress","id":"3","statusCategory":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/statuscategory/4","id":4,"key":"indeterminate","colorName":"yellow","name":"In Progress"}},"customfield_10006":null,"workratio":-1,"customfield_11509":null,"project":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/project/10404","id":"10404","key":"PLM","name":"HSS PLM Support","avatarUrls":{"16x16":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/projectavatar?size=xsmall&pid=10404&avatarId=11204","24x24":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/projectavatar?size=small&pid=10404&avatarId=11204","32x32":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/projectavatar?size=medium&pid=10404&avatarId=11204","48x48":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/projectavatar?pid=10404&avatarId=11204"}},"customfield_11200":null,"customfield_11201":null,"customfield_10014":null,"customfield_11301":null,"aggregateprogress":{"progress":0,"total":0},"lastViewed":null,"customfield_10012":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/customFieldOption/10011","value":"Customer Live System","id":"10011"},"customfield_10013":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/customFieldOption/10810","value":"CBA","id":"10810"},"customfield_11300":null,"customfield_10010":"EP6","customfield_10902":null,"timeoriginalestimate":null,"customfield_10011":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/customFieldOption/10809","value":"HSS-FE 16A FD1","id":"10809"},"customfield_10900":null,"customfield_10901":null,"customfield_11303":null,"customfield_11306":null,"customfield_11305":null,"votes":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/issue/PLM-1271/votes","votes":0,"hasVoted":false},"resolution":null,"resolutiondate":null,"creator":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/user?username=EBETESC","name":"EBETESC","emailAddress":"betsabe.merari.escott@ericsson.com","avatarUrls":{"16x16":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=xsmall&avatarId=10122","24x24":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=small&avatarId=10122","32x32":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=medium&avatarId=10122","48x48":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?avatarId=10122"},"displayName":"Betsabe Merari Escott","active":true},"aggregatetimeoriginalestimate":null,"customfield_11400":null,"watches":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/issue/PLM-1271/watchers","watchCount":2,"isWatching":false},"assignee":{"self":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/user?username=EYILPAN","name":"EYILPAN","emailAddress":"james.x.pan@ericsson.com","avatarUrls":{"16x16":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=xsmall&avatarId=10122","24x24":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=small&avatarId=10122","32x32":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?size=medium&avatarId=10122","48x48":"https://udm-hss-jira.rnd.ki.sw.ericsson.se/secure/useravatar?avatarId=10122"},"displayName":"James Pan X","active":true},"customfield_10609":null,"customfield_10500":"0|i03903:","aggregatetimeestimate":null,"versions":[],"customfield_10808":null,"customfield_10805":null,"customfield_10702":null,"customfield_10400":null,"timeestimate":null,"customfield_10300":null,"customfield_10800":null,"customfield_10803":null,"customfield_10801":null,"aggregatetimespent":null,"customfield_10802":null}}
 
-    def bar(self, message):
-        print message, 'from Parent'
-
-
-class FooChild(FooParent):
-    def __init__(self):
-        super(FooChild, self).__init__()
-        print 'Child'
-
-    def bar(self, message):
-        super(FooChild, self).bar(message)
-        print 'Child bar fuction'
-        print self.parent
-
-
-if __name__ == '__main__':
-    fooChild = FooChild()
-    fooChild.bar('HelloWorld')
-
-
-import wx
-import time
-if __name__ == "__msain__":
-    app = wx.App()
-    progressMax = 100
-    dialog = wx.ProgressDialog("A progress box", "Wait for data", progressMax,
-            style=wx.PD_ELAPSED_TIME | wx.PD_REMAINING_TIME)
-    keepGoing = True
-    count = 0
-    while True:
-        if count < progressMax:
-            count += 3
-        print time.time()
-        time.sleep(0.1)
-        print time.time()
-        print 's'
-        keepGoing = dialog.Update(count)
-
-    print 's'
-    #dialog.Destroy()
-class FooParent(object):
-    def __init__(self):
-        self.parent = 'I\'m the parent.'
-        print 'Parent'
-
-    def bar(self, message):
-        print message, 'from Parent'
-
-
-class FooChild(FooParent):
-    def __init__(self):
-        super(FooChild, self).__init__()
-        print 'Child'
-
-    def bar(self, message):
-        super(FooChild, self).bar(message)
-        print 'Child bar fuction'
-        print self.parent
-
-
-if __name__ == '__main__':
-    fooChild = FooChild()
-    fooChild.bar('HelloWorld')
-
-
-import wx
-import time
-if __name__ == "__msain__":
-    app = wx.App()
-    progressMax = 100
-    dialog = wx.ProgressDialog("A progress box", "Wait for data", progressMax,
-            style=wx.PD_ELAPSED_TIME | wx.PD_REMAINING_TIME)
-    keepGoing = True
-    count = 0
-    while True:
-        if count < progressMax:
-            count += 3
-        print time.time()
-        time.sleep(0.1)
-        print time.time()
-        print 's'
-        keepGoing = dialog.Update(count)
-
-    print 's'
-    #dialog.Destroy()
+pp=pprint.PrettyPrinter(indent=4)
+pp.pprint(d)

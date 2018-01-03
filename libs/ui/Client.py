@@ -5,14 +5,12 @@ from libs.ui.zCreateIssueDialog import CreateIssueDialog
 from libs.ui.zBatchSubmitIssueDialog import BatchSubmitIssueDialog
 from libs import Utility
 from os import listdir
-from libs.ui.GridData import GridData
+
 from libs import GlobalVariable
 import wx
 from wx.grid import Grid
 from wx import grid
-from libs.ThreadManager import ThreadManager
-
-
+from libs import ThreadManager
 import wx.lib.agw.customtreectrl as CT
 # from wx.calendar import CalendarCtrl
 # CalendarCtrl(self.panel)
@@ -27,21 +25,17 @@ class Client(wx.Frame):
         wx.Frame.__init__(self, None, -1, title="jira-cstm.qualcomm.com", size=(1000, 600))
         self.Center()
         self.panel = wx.Panel(self, -1)
-        self.grid_data = GridData()
         main_box = wx.BoxSizer(wx.VERTICAL)  # 容纳其他所有容器的box
         toolbar_box = self.__init_tool_box()
         tree_and_grid_box = self.__init_grid_and_tree_box()
         main_box.Add(toolbar_box, 1, wx.EXPAND)
         main_box.Add(tree_and_grid_box, 7, wx.EXPAND)
         self.panel.SetSizer(main_box)
-        self.thread_manager = ThreadManager(data=self.grid_data, update=self.__update_grid)
-        self.thread_manager.setDaemon(True)
-        self.thread_manager.start()
         self.__open_login()
 
 
     def __open_login(self):
-        login = LoginDialog(self.thread_manager)
+        login = LoginDialog()
         result = login.ShowModal()
         if result == wx.ID_CANCEL:
             login.Destroy()
@@ -62,7 +56,7 @@ class Client(wx.Frame):
             grid_box = wx.BoxSizer(wx.VERTICAL)
             title = wx.StaticText(panel, -1, "Grid")
             data_grid = Grid(panel, -1, size=(700, -1))
-            data_grid.SetTable(self.grid_data)
+            data_grid.SetTable(GlobalVariable.grid_data)
             data_grid.AdjustScrollbars()
             data_grid.EnableEditing(False)   # 设置数据无法修改
             data_grid.SetRowLabelSize(40)
@@ -160,7 +154,7 @@ class Client(wx.Frame):
         query_name = get_query_name(self.tree.Selection)
         query_string = Utility.convert_to_string(GlobalVariable.dict_query_config.get(query_name))
         dialog = ProgressDialog(seconds=3, title='Query', message='Querying...')
-        self.thread_manager.append_work(query=query_string, type='query', start=0, dialog=dialog)
+        ThreadManager.append_work(filter=query_string, type='query', start=0, dialog=dialog, max=100)
         dialog.ShowModal()
 
     def __hello(self, event):

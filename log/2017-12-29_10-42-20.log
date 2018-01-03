@@ -1,0 +1,12 @@
+Fri, 29 Dec 2017 10:42:21 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 10:42:21 ThreadManager.py[line:16] INFO {'account': u'zyouwux', 'password': u'Lct123123', 'type': 'login', 'update': <bound method LoginDialog.__update_gui_message of <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B6E798>>, 'dialog': <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B6E798>}
+Fri, 29 Dec 2017 10:42:21 ThreadManager.py[line:48] INFO start login
+Fri, 29 Dec 2017 10:42:23 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 10:42:23 ThreadManager.py[line:16] INFO {'account': u'zyouwux', 'password': u'Lct123123', 'type': 'login', 'update': <bound method LoginDialog.__update_gui_message of <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B6E798>>, 'dialog': <libs.ui.zLoginDialog.LoginDialog object at 0x0000000003B6E798>}
+Fri, 29 Dec 2017 10:42:23 ThreadManager.py[line:24] WARNING Same work is already in process.
+Fri, 29 Dec 2017 10:42:23 ThreadManager.py[line:25] WARNING Skip
+Fri, 29 Dec 2017 10:42:23 JIRA.py[line:89] INFO Success
+Fri, 29 Dec 2017 10:42:26 ThreadManager.py[line:15] INFO Add new work:
+Fri, 29 Dec 2017 10:42:26 ThreadManager.py[line:16] INFO {'filter': '"status"+in+("Open")+ORDER+BY+key+DESC&fields=key,summary,reporter,status', 'start': 0, 'type': 'query', 'dialog': <libs.ui.zProgressDialog.ProgressDialog object at 0x0000000003B6EAF8>, 'max': 100}
+Fri, 29 Dec 2017 10:42:26 ThreadManager.py[line:64] INFO start query
+Fri, 29 Dec 2017 10:42:26 JIRA.py[line:35] INFO SEARCH: https://udm-hss-jira.rnd.ki.sw.ericsson.se/rest/api/2/search?jql="status"+in+("Open")+ORDER+BY+key+DESC&fields=key,summary,reporter,status&maxResults=100&startAt=0

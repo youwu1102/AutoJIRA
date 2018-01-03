@@ -3,7 +3,7 @@ import wx
 
 
 class ProgressDialog(wx.Dialog):
-    def __init__(self, seconds, title, message):
+    def __init__(self, seconds, title, message, timeout=10):
         wx.Dialog.__init__(self, None, -1, title=title, size=(300, 150))
         self.Center()
         panel = wx.Panel(self)
@@ -15,16 +15,26 @@ class ProgressDialog(wx.Dialog):
         self.__gauge.SetBezelFace(3)
         self.__gauge.SetShadowWidth(3)
         self.__stop_flag = False
+        self.__time_interval = 100
+        self.__timer_count = 0
+        self.__timeout = timeout * 1000
         self.__timer = wx.Timer(self)
         self.Bind(wx.EVT_TIMER, self.__on_timer, self.__timer)
-        self.__timer.Start(100)
+        self.__timer.Start(self.__time_interval)
         self.Bind(wx.EVT_CLOSE, self.__on_close)
 
     def __on_close(self, event):
-        self.__info_text.SetLabel('Please wait until it complete')
+        if self.__timer_count > self.__timeout:
+            self.Destroy()
+        else:
+            self.__info_text.SetLabel('Please wait until it complete')
 
     def __on_timer(self, evt):
         if not self.__stop_flag:
+
+            self.__timer_count += self.__time_interval
+
+
             if self.__count == -1:
                 pass
             elif 9800 <= self.__count + self.__unit <= 10000:
@@ -38,6 +48,7 @@ class ProgressDialog(wx.Dialog):
 
     def stop(self):
         self.__stop_flag = True
+
 
 if __name__ == '__main__':
     app = wx.App()

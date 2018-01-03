@@ -1,14 +1,18 @@
 import wx.grid
 
 
-class GridData(wx.grid.PyGridTableBase):
-    __rows = []
-    __index = 0
-    __query = ''
-    _cols = []
-    _data = []
+class GridData(wx.grid.GridTableBase):
+    def __init__(self):
+        wx.grid.GridTableBase.__init__(self)
+        self._cols = "a"
+        self._data = [
+            "1 2 3".split(),
+            "4 5 6".split(),
+            "7 8 9".split()
+        ]
 
-    _highlighted = set()
+
+        self._highlighted = set()
 
     def GetColLabelValue(self, col):
         return self._cols[col]
@@ -40,7 +44,4 @@ class GridData(wx.grid.PyGridTableBase):
 
     def get_current_index(self):
         return self.__index
-
-    def reset_cols(self,cols):
-        self._cols =cols
 
