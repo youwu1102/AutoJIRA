@@ -1,5 +1,5 @@
 import wx.grid
-import time
+
 
 class GridData(wx.grid.PyGridTableBase):
     __rows = []
